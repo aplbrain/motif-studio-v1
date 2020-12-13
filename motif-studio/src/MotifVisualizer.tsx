@@ -1,14 +1,14 @@
 import React from "react";
 import Graph from "react-graph-vis";
 
-const MotifVisualizer = (props: { graph: any }) => {
+const MotifVisualizer = React.memo((props: { graph: any }) => {
     let unique = `${Math.random()}`;
     if (!props.graph) {
         return null;
     }
     let nodes = props.graph["nodes"].map((node: { id: any }) => {
         return {
-            id: unique + node.id,
+            id: node.id,
             label: node.id,
             shape: "ellipse",
             shapeProperties: { borderRadius: 1 },
@@ -41,8 +41,8 @@ const MotifVisualizer = (props: { graph: any }) => {
             constraints?: any;
         }) => {
             return {
-                from: unique + link.source,
-                to: unique + link.target,
+                from: link.source,
+                to: link.target,
                 color: link.exists ? "black" : "red",
                 dashes: link.exists ? false : true,
                 // label: link.constraints
@@ -71,6 +71,6 @@ const MotifVisualizer = (props: { graph: any }) => {
             <Graph key={unique} graph={graph} />
         </div>
     );
-};
+});
 
 export default MotifVisualizer;
