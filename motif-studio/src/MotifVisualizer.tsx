@@ -4,10 +4,17 @@ import ColorHash from "color-hash";
 
 function getColorForNode(node: any) {
     let { id, ...obj } = node;
-    return new ColorHash({ lightness: 0.7, saturation: 0.7 }).hex(
-        JSON.stringify(obj)
-    );
-    return "#B8CDF8";
+    return new ColorHash({
+        lightness: 0.7,
+        hash: function (str: string) {
+            var hash = 0;
+            for (var i = 0; i < str.length; i++) {
+                hash += str.charCodeAt(i);
+            }
+            return hash;
+        },
+    }).hex(JSON.stringify(obj.constraints));
+    // return "#B8CDF8";
 }
 
 const MotifVisualizer = React.memo(
