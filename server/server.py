@@ -38,9 +38,11 @@ def motif_syntax_to_graph():
 
     motif = Motif(motif_text)
     nx_g = motif.to_nx()
+    for node, constraints in motif.list_node_constraints().items():
+        nx_g.nodes[node]["constraints"] = constraints
     json_g = nx.readwrite.node_link_data(nx_g)
 
-    return jsonify({"motif": json_g})
+    return jsonify({"motif": json_g, "node_constraints": motif.list_node_constraints()})
 
 
 @APP.route("/execute", methods=["POST"])
