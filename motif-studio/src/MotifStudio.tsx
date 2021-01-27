@@ -13,6 +13,7 @@ import {
 import { ControlledEditor, monaco } from "@monaco-editor/react";
 import { Config } from "./Config";
 import MotifVisualizer from "./MotifVisualizer";
+import { CSVLink } from "react-csv";
 
 import { toast } from "react-toastify";
 
@@ -294,7 +295,25 @@ export class MotifStudio extends Component<
                                                 results in{" "}
                                                 {this.state.executionDuration /
                                                     1000}{" "}
-                                                seconds.
+                                                seconds.{" "}
+                                                <CSVLink
+                                                    data={_.zip(
+                                                        ...Object.values(
+                                                            this.state.results
+                                                        ).map((f) =>
+                                                            // @ts-ignore
+                                                            Object.values(f)
+                                                        )
+                                                    )}
+                                                    headers={Object.keys(
+                                                        this.state.results
+                                                    )}
+                                                    filename={
+                                                        "motif-studio-results.csv"
+                                                    }
+                                                >
+                                                    Download as CSV
+                                                </CSVLink>
                                             </Alert>
                                             <Table striped bordered hover>
                                                 <thead>
@@ -317,26 +336,30 @@ export class MotifStudio extends Component<
                                                                     .results[k]
                                                             )
                                                         )
-                                                    ).map((row, i) => {
-                                                        return (
-                                                            <tr key={i}>
-                                                                <td>{i}</td>
-                                                                {row.map(
-                                                                    (m) => (
-                                                                        <td
-                                                                            // @ts-ignore
-                                                                            key={
-                                                                                m
-                                                                            }
-                                                                        >
-                                                                            {/*@ts-ignore*/}
-                                                                            {m}
-                                                                        </td>
-                                                                    )
-                                                                )}
-                                                            </tr>
-                                                        );
-                                                    })}
+                                                    )
+                                                        .slice(0, 100)
+                                                        .map((row, i) => {
+                                                            return (
+                                                                <tr key={i}>
+                                                                    <td>{i}</td>
+                                                                    {row.map(
+                                                                        (m) => (
+                                                                            <td
+                                                                                // @ts-ignore
+                                                                                key={
+                                                                                    m
+                                                                                }
+                                                                            >
+                                                                                {/*@ts-ignore*/}
+                                                                                {
+                                                                                    m
+                                                                                }
+                                                                            </td>
+                                                                        )
+                                                                    )}
+                                                                </tr>
+                                                            );
+                                                        })}
                                                 </tbody>
                                             </Table>
                                         </div>
