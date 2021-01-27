@@ -14,6 +14,8 @@ import { ControlledEditor, monaco } from "@monaco-editor/react";
 import { Config } from "./Config";
 import MotifVisualizer from "./MotifVisualizer";
 
+import { toast } from "react-toastify";
+
 import "./pane-styling.css";
 
 import SplitPane, { Pane } from "react-split-pane";
@@ -63,6 +65,9 @@ export class MotifStudio extends Component<
             .then((motifParseResponse) => {
                 console.log(motifParseResponse);
                 this.setState({ motifJSON: motifParseResponse.motif });
+            })
+            .catch((res) => {
+                toast.error(`Failed to parse motif: ${res}`);
             });
     }
 
@@ -80,6 +85,11 @@ export class MotifStudio extends Component<
             .then((res) => res.json())
             .then((res) => {
                 this.setState({ hosts: res.hosts });
+            })
+            .catch((res) => {
+                toast.error(
+                    `Could not get a list of available host graphs: ${res}`
+                );
             });
 
         // Prepare the code editor.
@@ -155,7 +165,9 @@ export class MotifStudio extends Component<
                     loading: false,
                 });
             })
-            .catch((err) => console.error(err));
+            .catch((res) => {
+                toast.error(`Motif search failed: ${res}`);
+            });
     }
 
     onDatasetChange(ev: { target: { value: any } }) {
@@ -227,6 +239,10 @@ export class MotifStudio extends Component<
                                         variant="primary"
                                         block
                                         onClick={this.handlePressExecute}
+                                        disabled={
+                                            !this.state.selectedDataset ||
+                                            !this.state.motifText
+                                        }
                                     >
                                         {this.state.loading
                                             ? "Running..."
