@@ -1,9 +1,12 @@
+import os
+from typing import List
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import networkx as nx
 import pandas as pd
-from dotmotif import Motif, GrandIsoExecutor
+from dotmotif import Motif
 
+from hosts import GrandIsoProvider, NeuPrintProvider, MotifStudioHosts
 
 __version__ = "0.1.0"
 
@@ -11,19 +14,40 @@ __version__ = "0.1.0"
 APP = Flask(__name__)
 CORS(APP)
 
-HOSTS = {
-    "file://kakaria-bivort": lambda: GrandIsoExecutor(
-        graph=nx.read_graphml("graphs/Kakaria-Bivort-PBa.graphml")
-    ),
-    "file://takemura": lambda: GrandIsoExecutor(
-        graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml")
-    ),
-}
+# HOSTS: List[HostProvider] = {
+#     "file://kakaria-bivort": lambda: GrandIsoExecutor(
+#         graph=nx.read_graphml("graphs/Kakaria-Bivort-PBa.graphml")
+#     ),
+#     "file://takemura": lambda: ,
+# }
+
+HOSTS = MotifStudioHosts(
+    [
+        NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")),
+        GrandIsoProvider(
+            graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml"),
+            uri="file://takemura",
+            name="Takemura et al Medulla",
+        ),
+    ]
+)
 
 
 @APP.route("/")
 def index():
     return jsonify({"server_version": __version__})
+
+
+@APP.route("/hosts", methods=["GET"])
+def get_hosts():
+    return jsonify(
+        {
+            "hosts": [
+                {"uri": host.get_uri(), "name": host.get_name()}
+                for host in HOSTS.get_hosts()
+            ]
+        }
+    )
 
 
 @APP.route("/parse", methods=["POST"])
@@ -61,10 +85,12 @@ def execute_motif_on_host():
     nx_g = motif.to_nx()
     json_g = nx.readwrite.node_link_data(nx_g)
 
-    # if payload['hostID'] == "file://kakaria-bivort":
-    E = HOSTS["file://takemura"]()
+    try:
+        host = HOSTS.get_host(payload["hostID"])
+    except:
+        return jsonify({"status": "Failed to find specified host graph."}), 500
 
-    results = pd.DataFrame(E.find(motif))
+    results = pd.DataFrame(host.find(motif))
 
     return jsonify({"motif": json_g, "results": results.to_dict()})
 

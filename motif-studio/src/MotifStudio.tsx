@@ -27,6 +27,8 @@ export class MotifStudio extends Component<
         loading: boolean;
         results?: any;
         executionDuration: number;
+        hosts: Array<any>;
+        selectedDataset?: string;
     }
 > {
     constructor(props: {}) {
@@ -38,8 +40,11 @@ export class MotifStudio extends Component<
             results: undefined,
             executionDuration: 0,
             loading: false,
+            hosts: [],
+            selectedDataset: undefined,
         };
         this.handleInputChanged = this.handleInputChanged.bind(this);
+        this.onDatasetChange = this.onDatasetChange.bind(this);
         this.handlePressExecute = this.handlePressExecute.bind(this);
         this.updateMotifJSON = _.throttle(
             this.updateMotifJSON.bind(this),
@@ -70,6 +75,14 @@ export class MotifStudio extends Component<
     }
 
     componentDidMount() {
+        // Get a list of all valid hosts:
+        fetch(Config.api.baseURL + "/hosts")
+            .then((res) => res.json())
+            .then((res) => {
+                this.setState({ hosts: res.hosts });
+            });
+
+        // Prepare the code editor.
         monaco
             .init()
             .then((monaco) => {
@@ -81,8 +94,8 @@ export class MotifStudio extends Component<
                     tokenizer: {
                         root: [
                             [/#.*$/, "comment"],
-                            [/\b[\>\<\=\!]{1,2}\b/, "op"],
-                            [/[\-\~\!][\>\|]/, "edge"],
+                            [/\b[><=!]{1,2}\b/, "op"],
+                            [/[-~!][>|]/, "edge"],
                             [/\w+/, "entity"],
                             [/\w+\(.*/, "macro"],
                         ],
@@ -126,7 +139,7 @@ export class MotifStudio extends Component<
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 motif: this.state.motifText,
-                hostID: "kakaria-bivort",
+                hostID: this.state.selectedDataset,
             }),
         })
             .then((res) => res.json())
@@ -143,6 +156,13 @@ export class MotifStudio extends Component<
                 });
             })
             .catch((err) => console.error(err));
+    }
+
+    onDatasetChange(ev: { target: { value: any } }) {
+        console.log(ev.target.value);
+        this.setState({
+            selectedDataset: ev.target.value,
+        });
     }
 
     render() {
@@ -184,43 +204,34 @@ export class MotifStudio extends Component<
                         >
                             <Row style={{ minHeight: "40vh" }}>
                                 <Col>
-                                    <Form>
-                                        <Form.Group>
-                                            <Form.Label>Dataset</Form.Label>
-                                            <Form.Control as="select" custom>
-                                                <option>
-                                                    C. elegans (Cook 2019)
-                                                </option>
-                                                <option>
-                                                    Drosophila Medulla (Takemura
-                                                    2013)
-                                                </option>
-                                                <option>Hemibrain</option>
-                                                <option>
-                                                    Kakaria-Bivort Ring
-                                                    Attractor
-                                                </option>
-                                                <option>MICrONS v185</option>
-                                            </Form.Control>
-                                        </Form.Group>
-                                        <Form.Group>
-                                            <Form.Label>
-                                                Executor Arguments
-                                            </Form.Label>
-                                            <Form.Control as="select" custom>
-                                                <option>neuPrint Token</option>
-                                            </Form.Control>
-                                        </Form.Group>
-                                        <Button
-                                            variant="primary"
-                                            block
-                                            onClick={this.handlePressExecute}
+                                    <Form.Group controlId="form.dataset">
+                                        <Form.Label>Dataset</Form.Label>
+                                        <Form.Control
+                                            onChange={this.onDatasetChange}
+                                            as="select"
+                                            defaultValue=""
+                                            value={this.state.selectedDataset}
+                                            custom
                                         >
-                                            {this.state.loading
-                                                ? "Running..."
-                                                : "Run"}
-                                        </Button>
-                                    </Form>
+                                            {this.state.hosts.map((h) => (
+                                                <option
+                                                    key={h.uri}
+                                                    value={h.uri}
+                                                >
+                                                    {h.name}
+                                                </option>
+                                            ))}
+                                        </Form.Control>
+                                    </Form.Group>
+                                    <Button
+                                        variant="primary"
+                                        block
+                                        onClick={this.handlePressExecute}
+                                    >
+                                        {this.state.loading
+                                            ? "Running..."
+                                            : "Run"}
+                                    </Button>
                                 </Col>
                                 <Col>
                                     <MotifVisualizer
