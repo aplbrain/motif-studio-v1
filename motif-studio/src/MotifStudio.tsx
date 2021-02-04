@@ -21,11 +21,33 @@ import "./pane-styling.css";
 
 import SplitPane, { Pane } from "react-split-pane";
 
+type RequestParamType = {
+    [key: string]: any;
+};
+
+const uriWithParam = (baseUrl: string, params: RequestParamType): string => {
+    const Url = new URL(baseUrl);
+    let urlParams: URLSearchParams = new URLSearchParams(Url.search);
+    for (const key in params) {
+        if (params[key] !== undefined) {
+            urlParams.set(key, params[key]);
+        }
+    }
+    Url.search = urlParams.toString();
+    return Url.toString();
+};
+
+const base64 = {
+    decode: (s: any) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0)),
+    encode: (b: any) => btoa(String.fromCharCode(...new Uint8Array(b))),
+};
+
 export class MotifStudio extends Component<
     {},
     {
         motifText?: string;
         motifJSON: any;
+        motifError?: string;
         rightPaneTab: string;
         loading: boolean;
         results?: any;
@@ -39,7 +61,8 @@ export class MotifStudio extends Component<
         this.state = {
             motifText: "",
             motifJSON: undefined,
-            rightPaneTab: "run",
+            motifError: undefined,
+            rightPaneTab: "view",
             results: undefined,
             executionDuration: 0,
             loading: false,
@@ -64,8 +87,15 @@ export class MotifStudio extends Component<
         })
             .then((res) => res.json())
             .then((motifParseResponse) => {
-                console.log(motifParseResponse);
-                this.setState({ motifJSON: motifParseResponse.motif });
+                if (motifParseResponse.error) {
+                    this.setState({ motifError: motifParseResponse.error });
+                } else {
+                    this.setState({ motifError: undefined });
+                }
+
+                if (motifParseResponse.motif) {
+                    this.setState({ motifJSON: motifParseResponse.motif });
+                }
             })
             .catch((res) => {
                 toast.error(`Failed to parse motif: ${res}`);
@@ -74,7 +104,20 @@ export class MotifStudio extends Component<
 
     handleInputChanged(ev: { target: { value: string } }, value?: string) {
         this.setState({ motifText: value });
+
         if (value) {
+            let urlVal = value; //.replace(" ", "%20");
+            window.history.replaceState(
+                {
+                    path: uriWithParam(window.location.toString(), {
+                        mS: encodeURIComponent(urlVal),
+                    }),
+                },
+                "Motif Studio",
+                uriWithParam(window.location.toString(), {
+                    mS: encodeURIComponent(urlVal),
+                })
+            );
             window.localStorage.setItem("motifText", value);
             this.updateMotifJSON();
         }
@@ -172,7 +215,6 @@ export class MotifStudio extends Component<
     }
 
     onDatasetChange(ev: { target: { value: any } }) {
-        console.log(ev.target.value);
         this.setState({
             selectedDataset: ev.target.value,
         });
@@ -205,10 +247,17 @@ export class MotifStudio extends Component<
                     >
                         <Tab
                             eventKey="view"
-                            title="View"
+                            title="Build"
                             style={{ height: "90vh" }}
                         >
-                            <MotifVisualizer graph={this.state.motifJSON} />
+                            <MotifVisualizer
+                                graph={this.state.motifJSON}
+                                error={
+                                    this.state.motifError
+                                        ? [this.state.motifError]
+                                        : []
+                                }
+                            />
                         </Tab>
                         <Tab
                             eventKey="run"
