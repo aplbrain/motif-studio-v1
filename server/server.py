@@ -60,10 +60,24 @@ def motif_syntax_to_graph():
     # constructor from looking on disk and doing anything nefarious.
     motif_text = "# Generated in MotifStudio. \n" + payload["motif"]
 
-    motif = Motif(motif_text)
+    try:
+        motif = Motif(motif_text)
+    except Exception as e:
+        return jsonify({"status": "Parse failed", "error": str(e)}), 500
     nx_g = motif.to_nx()
-    for node, constraints in motif.list_node_constraints().items():
-        nx_g.nodes[node]["constraints"] = constraints
+    try:
+        for node, constraints in motif.list_node_constraints().items():
+            nx_g.nodes[node]["constraints"] = constraints
+    except:
+        return (
+            jsonify(
+                {
+                    "status": "Parse failed",
+                    "error": "Invalid constraint right-hand side.",
+                }
+            ),
+            500,
+        )
     json_g = nx.readwrite.node_link_data(nx_g)
 
     return jsonify({"motif": json_g, "node_constraints": motif.list_node_constraints()})

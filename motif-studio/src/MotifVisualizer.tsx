@@ -7,7 +7,7 @@ function getColorForNode(node: any) {
     return new ColorHash({
         lightness: 0.7,
         hash: function (str: string) {
-            str = str || ""
+            str = str || "";
             var hash = 0;
             for (var i = 0; i < str.length; i++) {
                 hash += str.charCodeAt(i);
@@ -19,7 +19,7 @@ function getColorForNode(node: any) {
 }
 
 const MotifVisualizer = React.memo(
-    (props: { graph: any; nodeConstraints?: Array<any> }) => {
+    (props: { graph: any; nodeConstraints?: Array<any>; error?: string[] }) => {
         let unique = `${Math.random()}`;
         if (!props.graph) {
             return null;
@@ -86,6 +86,15 @@ const MotifVisualizer = React.memo(
         let graph = { nodes, edges, physics };
         return (
             <div style={{ width: "100%", height: "100%" }}>
+                {props.error && props.error.length ? (
+                    <code>
+                        <b>Errors encountered when building this motif:</b>
+                        <br />
+                        {props.error.map((i) => (
+                            <span key={i}>{i}</span>
+                        ))}
+                    </code>
+                ) : null}
                 <Graph key={unique} graph={graph} />
             </div>
         );
