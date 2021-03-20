@@ -28,5 +28,5 @@ This will serve the API at `http://localhost:5000`, and the frontend will be ava
 - [ ] Click/drag interface for adding edges and nodes
 - [ ] Inspection panel
 - [ ] Motif "interestingness" heuristics to indicate anticipated search complexity
-- [ ] Pass warnings and errors from the backend along to the user
+- [x] Pass warnings and errors from the backend along to the user
 - [ ] Pass Validator errors to the user
