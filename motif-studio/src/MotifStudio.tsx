@@ -236,6 +236,38 @@ export class MotifStudio extends Component<
             window.localStorage.getItem("motifText") ||
             "# My Example Motif\n\nNeuron_A -> Neuron_2";
 
+        let awaitingResultsTable = (
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Node ID ...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Results will appear here...</td>
+                    </tr>
+                </tbody>
+            </Table>
+        );
+        let noResultsTable = (
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Node ID ...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>No results found.</td>
+                    </tr>
+                </tbody>
+            </Table>
+        );
         return (
             <SplitPane split="vertical" minSize={100} defaultSize={"25%"}>
                 <Pane>
@@ -323,23 +355,10 @@ export class MotifStudio extends Component<
                                     }}
                                 >
                                     {this.state.results === undefined ? (
-                                        <Table striped bordered hover>
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Node ID ...</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>0</td>
-                                                    <td>
-                                                        Results will appear
-                                                        here...
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </Table>
+                                        awaitingResultsTable
+                                    ) : Object.keys(this.state.results)
+                                          .length === 0 ? (
+                                        noResultsTable
                                     ) : (
                                         <div>
                                             <Alert variant={"primary"}>
