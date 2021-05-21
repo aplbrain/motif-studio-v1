@@ -29,7 +29,8 @@ hosts = [
         uri="file://takemura",
         name="Takemura et al Medulla",
     ),
-    *get_hosts_from_mossdb_prefix()
+    *get_hosts_from_mossdb_prefix("file://graphs/"),
+    *get_hosts_from_mossdb_prefix("file://neurodata.io/braingraphs/"),
 ]
 
 if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
