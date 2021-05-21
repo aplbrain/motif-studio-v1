@@ -6,7 +6,7 @@ import networkx as nx
 import pandas as pd
 from dotmotif import Motif
 
-from hosts import GrandIsoProvider, NeuPrintProvider, MotifStudioHosts
+from hosts import GrandIsoProvider, NeuPrintProvider, MotifStudioHosts, get_hosts_from_mossdb_prefix
 
 __version__ = "0.1.0"
 
@@ -21,17 +21,26 @@ CORS(APP)
 #     "file://takemura": lambda: ,
 # }
 
-HOSTS = MotifStudioHosts(
-    [
-        NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")),
-        GrandIsoProvider(
-            graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml"),
-            uri="file://takemura",
-            name="Takemura et al Medulla",
-        ),
-    ]
-)
+print("Loading hosts...")
 
+hosts = [
+    GrandIsoProvider(
+        graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml"),
+        uri="file://takemura",
+        name="Takemura et al Medulla",
+    ),
+    *get_hosts_from_mossdb_prefix("file://graphs/"),
+    *get_hosts_from_mossdb_prefix("file://neurodata.io/braingraphs/"),
+]
+
+if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
+    print("Connecting to neuPrint host...")
+    hosts.append(NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")))
+
+
+HOSTS = MotifStudioHosts(hosts)
+
+print(f"Loaded with {len(HOSTS)} host graphs.")
 
 @APP.route("/")
 def index():

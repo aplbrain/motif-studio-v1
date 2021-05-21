@@ -55,6 +55,9 @@ class GrandIsoProvider(HostProvider):
         self._name = name
         self._uri = uri
 
+    def __repr__(self):
+        return f"<GrandIsoProvider ({self._uri})>"
+
     def get_name(self) -> str:
         return self._name
 
@@ -72,8 +75,34 @@ class MotifStudioHosts:
         for host in hosts:
             self._lookup[host.get_uri()] = host
 
+    def __len__(self):
+        return len(self.hosts)
+
     def get_host(self, uri: str) -> HostProvider:
         return self._lookup[uri]
 
     def get_hosts(self):
         return self.hosts
+
+
+def get_hosts_from_mossdb_prefix(
+    prefix: str = "file://graphs/", mossdb_uri: str = "http://mossdb"
+) -> List[GrandIsoProvider]:
+    """
+    Get a list of connectome graphs to search from MossDB.
+    """
+    from mossdb.client import MossDBClient
+
+    mdb = MossDBClient(mossdb_uri)
+
+    graph_metas = mdb.list_metadata(prefix)
+    graphs = []
+
+    for m in graph_metas:
+        try:
+            gml_text = mdb.get_file(m['name'])
+            graphs.append(GrandIsoProvider(graph=nx.parse_graphml(gml_text), name=m['name'], uri=m['name']))
+        except:
+            pass
+    return graphs
+
