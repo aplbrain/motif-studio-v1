@@ -185,6 +185,8 @@ export class MotifStudio extends Component<
                         { token: "macro", foreground: "888800" },
                     ],
                 });
+
+                this.updateMotifJSON();
             })
             .catch((error) =>
                 console.error(
