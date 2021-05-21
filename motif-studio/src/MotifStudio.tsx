@@ -124,6 +124,16 @@ export class MotifStudio extends Component<
     }
 
     componentDidMount() {
+        let keys = window.location.search.slice(1).toString().split("=");
+        let urlState: { [name: string]: string } = {};
+        for (let i = 0; i < keys.length; i += 2) {
+            urlState[keys[i]] = decodeURIComponent(
+                decodeURIComponent(keys[i + 1])
+            );
+        }
+
+        this.setState({ motifText: urlState.mS });
+
         // Get a list of all valid hosts:
         fetch(Config.api.baseURL + "/hosts")
             .then((res) => res.json())
