@@ -62,7 +62,7 @@ export class MotifStudio extends Component<
             motifText: "",
             motifJSON: undefined,
             motifError: undefined,
-            rightPaneTab: "view",
+            rightPaneTab: "run",
             results: undefined,
             executionDuration: 0,
             loading: false,
@@ -283,9 +283,12 @@ export class MotifStudio extends Component<
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={this.state.rightPaneTab}
-                        onSelect={(k) =>
-                            k ? this.setState({ rightPaneTab: k }) : null
-                        }
+                        onSelect={(k) => {
+                            if (k) {
+                                this.setState({ rightPaneTab: k });
+                            }
+                            this.updateMotifJSON();
+                        }}
                     >
                         <Tab
                             eventKey="view"
@@ -317,6 +320,15 @@ export class MotifStudio extends Component<
                                             value={this.state.selectedDataset}
                                             custom
                                         >
+                                            <option
+                                                hidden
+                                                disabled
+                                                selected
+                                                value={""}
+                                            >
+                                                {" "}
+                                                No dataset selected...{" "}
+                                            </option>
                                             {this.state.hosts.map((h) => (
                                                 <option
                                                     key={h.uri}
