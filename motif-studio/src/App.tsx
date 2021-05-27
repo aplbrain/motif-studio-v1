@@ -19,7 +19,7 @@ import {
 import { LocalStorageMotifStore } from "./store";
 
 function App() {
-    let [view, setView] = useState("Build");
+    let [view, setView] = useState("Run");
     let studio = useRef(null);
     let [saveModalVisible, setSaveModalVisible] = useState(false);
     let [openModalVisible, setOpenModalVisible] = useState(false);
@@ -170,8 +170,13 @@ function App() {
                                 >
                                     Save
                                 </Dropdown.Item>
-                                <Dropdown.Divider />
-                                <Dropdown.Item>Share</Dropdown.Item>
+                                {/* <Dropdown.Divider />
+                                <Dropdown.Item
+                                    disabled={true}
+                                    className={"disabled"}
+                                >
+                                    Share
+                                </Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Nav.Link active onClick={() => setView("Build")}>
