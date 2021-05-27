@@ -22,6 +22,7 @@ function App() {
     let [view, setView] = useState("Build");
     let studio = useRef(null);
     let [saveModalVisible, setSaveModalVisible] = useState(false);
+    let [openModalVisible, setOpenModalVisible] = useState(false);
     let [savingMotifName, setSavingMotifName] = useState("");
 
     let db = new LocalStorageMotifStore();
@@ -43,6 +44,18 @@ function App() {
         });
         setSaveModalVisible(false);
         toast.success(`Saved '${savingMotifName}'.`);
+    };
+
+    let handleOpen = () => {
+        let motif = db.load(savingMotifName);
+        setOpenModalVisible(false);
+        if (studio.current) {
+            // @ts-ignore
+            studio.current.setState({ motifText: motif.motifText });
+            // @ts-ignore
+            window.setTimeout(studio.current.updateMotifJSON, 100);
+        }
+        toast.success(`Loaded '${savingMotifName}'.`);
     };
 
     let savedMotifsListGroup = (
@@ -96,9 +109,44 @@ function App() {
             </Modal>
         </>
     );
+
+    let openModal = (
+        <>
+            <Modal
+                show={openModalVisible}
+                onHide={() => setOpenModalVisible(false)}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Load a motif</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>{savedMotifsListGroup}</Modal.Body>
+
+                <Modal.Footer>
+                    <InputGroup className="mb-3">
+                        <FormControl
+                            placeholder="Filename"
+                            aria-label="Filename"
+                            onChange={(ev) =>
+                                setSavingMotifName(ev.target.value)
+                            }
+                            value={savingMotifName}
+                        />
+                        <InputGroup.Append>
+                            <Button onClick={handleOpen} variant="primary">
+                                Open
+                            </Button>
+                        </InputGroup.Append>
+                    </InputGroup>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
+
     return (
         <>
             {saveModal}
+            {openModal}
             <Navbar bg="primary" variant="dark">
                 <Nav className="mr-auto ">
                     <div className="d-flex">
@@ -112,7 +160,11 @@ function App() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item>Open</Dropdown.Item>
+                                <Dropdown.Item
+                                    onClick={() => setOpenModalVisible(true)}
+                                >
+                                    Open
+                                </Dropdown.Item>
                                 <Dropdown.Item
                                     onClick={() => setSaveModalVisible(true)}
                                 >
