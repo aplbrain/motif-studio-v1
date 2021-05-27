@@ -3,6 +3,7 @@ import _ from "lodash";
 import {
     Alert,
     Button,
+    Card,
     Col,
     Form,
     Row,
@@ -42,8 +43,10 @@ const base64 = {
     encode: (b: any) => btoa(String.fromCharCode(...new Uint8Array(b))),
 };
 
+type _propsType = { motifText?: string; requestedView?: string };
+
 export class MotifStudio extends Component<
-    {},
+    _propsType,
     {
         motifText?: string;
         motifJSON: any;
@@ -56,13 +59,13 @@ export class MotifStudio extends Component<
         selectedDataset?: string;
     }
 > {
-    constructor(props: {}) {
+    constructor(props: _propsType) {
         super(props);
         this.state = {
-            motifText: "",
+            motifText: props.motifText || "",
             motifJSON: undefined,
             motifError: undefined,
-            rightPaneTab: "run",
+            rightPaneTab: props.requestedView || "Run",
             results: undefined,
             executionDuration: 0,
             loading: false,
@@ -70,12 +73,18 @@ export class MotifStudio extends Component<
             selectedDataset: undefined,
         };
         this.handleInputChanged = this.handleInputChanged.bind(this);
+        this.setMotifText = this.setMotifText.bind(this);
         this.onDatasetChange = this.onDatasetChange.bind(this);
         this.handlePressExecute = this.handlePressExecute.bind(this);
         this.updateMotifJSON = _.throttle(
             this.updateMotifJSON.bind(this),
             Config.api.throttleMs
         );
+    }
+
+    setMotifText(value: string) {
+        this.setState({ motifText: value });
+        this.updateMotifJSON();
     }
 
     updateMotifJSON() {
@@ -270,196 +279,164 @@ export class MotifStudio extends Component<
                 </tbody>
             </Table>
         );
+
+        let motifVisualizerTab = (
+            <div style={{ height: "80vh", padding: "1em" }}>
+                <MotifVisualizer
+                    graph={this.state.motifJSON}
+                    error={this.state.motifError ? [this.state.motifError] : []}
+                />
+            </div>
+        );
+
+        let executionForm = (
+            <Card style={{ margin: "1em" }}>
+                <Card.Body>
+                    <Form.Group controlId="form.dataset">
+                        <Form.Label>Dataset</Form.Label>
+                        <Form.Control
+                            onChange={this.onDatasetChange}
+                            as="select"
+                            defaultValue=""
+                            value={this.state.selectedDataset}
+                            custom
+                        >
+                            <option hidden disabled selected value={""}>
+                                {" "}
+                                No dataset selected...{" "}
+                            </option>
+                            {this.state.hosts.map((h) => (
+                                <option key={h.uri} value={h.uri}>
+                                    {h.name}
+                                </option>
+                            ))}
+                        </Form.Control>
+                    </Form.Group>
+                    <Button
+                        variant="primary"
+                        block
+                        onClick={this.handlePressExecute}
+                        disabled={
+                            !this.state.selectedDataset || !this.state.motifText
+                        }
+                    >
+                        {this.state.loading ? "Running..." : "Run"}
+                    </Button>
+                </Card.Body>
+            </Card>
+        );
+
+        let resultKeys = this.state.results
+            ? Object.keys(this.state.results)
+            : [];
+
+        let resourceReadoutTable = (
+            <div>
+                {this.state.results === undefined ? (
+                    awaitingResultsTable
+                ) : resultKeys.length === 0 ? (
+                    noResultsTable
+                ) : (
+                    <div>
+                        <Alert variant={"primary"}>
+                            {
+                                Object.keys(
+                                    // @ts-ignore
+                                    Object.values(this.state.results)[0]
+                                ).length
+                            }{" "}
+                            results in {this.state.executionDuration / 1000}{" "}
+                            seconds.{" "}
+                            <CSVLink
+                                data={_.zip(
+                                    ...Object.values(this.state.results).map(
+                                        (f) =>
+                                            // @ts-ignore
+                                            Object.values(f)
+                                    )
+                                )}
+                                headers={resultKeys}
+                                filename={"motif-studio-results.csv"}
+                            >
+                                Download as CSV
+                            </CSVLink>
+                        </Alert>
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    {resultKeys.map((k) => (
+                                        <th key={k}>{k}</th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {_.zip(
+                                    ...resultKeys.map((k) =>
+                                        Object.values(this.state.results[k])
+                                    )
+                                )
+                                    .slice(0, 100)
+                                    .map((row, i) => {
+                                        return (
+                                            <tr key={i}>
+                                                <td>{i}</td>
+                                                {row.map((m) => (
+                                                    <td
+                                                        // @ts-ignore
+                                                        key={m}
+                                                    >
+                                                        {/*@ts-ignore*/}
+                                                        {m}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        );
+                                    })}
+                            </tbody>
+                        </Table>
+                    </div>
+                )}
+            </div>
+        );
+
+        let motifRunTab = (
+            <div style={{ height: "80vh", padding: "1em" }}>
+                <Row style={{ minHeight: "40vh" }}>
+                    <Col>{executionForm}</Col>
+                    <Col>
+                        <MotifVisualizer graph={this.state.motifJSON} />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col
+                        style={{
+                            overflow: "scroll",
+                            maxHeight: "45vh",
+                        }}
+                    >
+                        {resourceReadoutTable}
+                    </Col>
+                </Row>
+            </div>
+        );
+
         return (
             <SplitPane split="vertical" minSize={100} defaultSize={"25%"}>
                 <Pane>
                     <ControlledEditor
-                        height="90vh"
+                        height="80vh"
                         language="motiflang"
                         theme="motiftheme"
                         value={defaultValue}
+                        options={{ fontSize: 14 }}
                         onChange={this.handleInputChanged}
                     />
                 </Pane>
                 <Pane>
-                    <Tabs
-                        id="controlled-tab-example"
-                        activeKey={this.state.rightPaneTab}
-                        onSelect={(k) => {
-                            if (k) {
-                                this.setState({ rightPaneTab: k });
-                            }
-                            this.updateMotifJSON();
-                        }}
-                    >
-                        <Tab
-                            eventKey="view"
-                            title="Build"
-                            style={{ height: "90vh" }}
-                        >
-                            <MotifVisualizer
-                                graph={this.state.motifJSON}
-                                error={
-                                    this.state.motifError
-                                        ? [this.state.motifError]
-                                        : []
-                                }
-                            />
-                        </Tab>
-                        <Tab
-                            eventKey="run"
-                            title="Run"
-                            style={{ height: "90vh", padding: "1em" }}
-                        >
-                            <Row style={{ minHeight: "40vh" }}>
-                                <Col>
-                                    <Form.Group controlId="form.dataset">
-                                        <Form.Label>Dataset</Form.Label>
-                                        <Form.Control
-                                            onChange={this.onDatasetChange}
-                                            as="select"
-                                            defaultValue=""
-                                            value={this.state.selectedDataset}
-                                            custom
-                                        >
-                                            <option
-                                                hidden
-                                                disabled
-                                                selected
-                                                value={""}
-                                            >
-                                                {" "}
-                                                No dataset selected...{" "}
-                                            </option>
-                                            {this.state.hosts.map((h) => (
-                                                <option
-                                                    key={h.uri}
-                                                    value={h.uri}
-                                                >
-                                                    {h.name}
-                                                </option>
-                                            ))}
-                                        </Form.Control>
-                                    </Form.Group>
-                                    <Button
-                                        variant="primary"
-                                        block
-                                        onClick={this.handlePressExecute}
-                                        disabled={
-                                            !this.state.selectedDataset ||
-                                            !this.state.motifText
-                                        }
-                                    >
-                                        {this.state.loading
-                                            ? "Running..."
-                                            : "Run"}
-                                    </Button>
-                                </Col>
-                                <Col>
-                                    <MotifVisualizer
-                                        graph={this.state.motifJSON}
-                                    />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col
-                                    style={{
-                                        overflow: "scroll",
-                                        maxHeight: "45vh",
-                                    }}
-                                >
-                                    {this.state.results === undefined ? (
-                                        awaitingResultsTable
-                                    ) : Object.keys(this.state.results)
-                                          .length === 0 ? (
-                                        noResultsTable
-                                    ) : (
-                                        <div>
-                                            <Alert variant={"primary"}>
-                                                {
-                                                    Object.keys(
-                                                        // @ts-ignore
-                                                        Object.values(
-                                                            this.state.results
-                                                        )[0]
-                                                    ).length
-                                                }{" "}
-                                                results in{" "}
-                                                {this.state.executionDuration /
-                                                    1000}{" "}
-                                                seconds.{" "}
-                                                <CSVLink
-                                                    data={_.zip(
-                                                        ...Object.values(
-                                                            this.state.results
-                                                        ).map((f) =>
-                                                            // @ts-ignore
-                                                            Object.values(f)
-                                                        )
-                                                    )}
-                                                    headers={Object.keys(
-                                                        this.state.results
-                                                    )}
-                                                    filename={
-                                                        "motif-studio-results.csv"
-                                                    }
-                                                >
-                                                    Download as CSV
-                                                </CSVLink>
-                                            </Alert>
-                                            <Table striped bordered hover>
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        {Object.keys(
-                                                            this.state.results
-                                                        ).map((k) => (
-                                                            <th key={k}>{k}</th>
-                                                        ))}
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {_.zip(
-                                                        ...Object.keys(
-                                                            this.state.results
-                                                        ).map((k) =>
-                                                            Object.values(
-                                                                this.state
-                                                                    .results[k]
-                                                            )
-                                                        )
-                                                    )
-                                                        .slice(0, 100)
-                                                        .map((row, i) => {
-                                                            return (
-                                                                <tr key={i}>
-                                                                    <td>{i}</td>
-                                                                    {row.map(
-                                                                        (m) => (
-                                                                            <td
-                                                                                // @ts-ignore
-                                                                                key={
-                                                                                    m
-                                                                                }
-                                                                            >
-                                                                                {/*@ts-ignore*/}
-                                                                                {
-                                                                                    m
-                                                                                }
-                                                                            </td>
-                                                                        )
-                                                                    )}
-                                                                </tr>
-                                                            );
-                                                        })}
-                                                </tbody>
-                                            </Table>
-                                        </div>
-                                    )}
-                                </Col>
-                            </Row>
-                        </Tab>
-                    </Tabs>
+                    {this.props.requestedView === "Build"
+                        ? motifVisualizerTab
+                        : motifRunTab}
                 </Pane>
             </SplitPane>
         );
