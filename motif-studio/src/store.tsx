@@ -7,6 +7,7 @@ type MotifPayload = {
 interface MotifStore {
     save(name: string, motif: MotifPayload): void;
     load(name: string): MotifPayload;
+    delete(name: string): MotifPayload;
 }
 
 class LocalStorageMotifStore implements MotifStore {
@@ -40,6 +41,14 @@ class LocalStorageMotifStore implements MotifStore {
     load(name: string): MotifPayload {
         let currentStore = this._getFromLocalStorage();
         return currentStore[name];
+    }
+
+    delete(name: string): MotifPayload {
+        let currentStore = this._getFromLocalStorage();
+        let payload = currentStore[name];
+        delete currentStore[name];
+        this._saveToLocalStorage(currentStore);
+        return payload;
     }
 }
 
