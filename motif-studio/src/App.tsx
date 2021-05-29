@@ -46,8 +46,12 @@ function App() {
         toast.success(`Saved '${savingMotifName}'.`);
     };
 
-    let handleOpen = () => {
+    let handleLoad = () => {
         let motif = db.load(savingMotifName);
+        if (!motif) {
+            toast.error(`Couldn't load motif ${savingMotifName}.`);
+            return;
+        }
         setOpenModalVisible(false);
         if (studio.current) {
             // @ts-ignore
@@ -56,6 +60,10 @@ function App() {
             window.setTimeout(studio.current.updateMotifJSON, 100);
         }
         toast.success(`Loaded '${savingMotifName}'.`);
+    };
+    let handleDelete = (name: string) => {
+        db.delete(name);
+        toast.success(`Deleted '${savingMotifName}'.`);
     };
 
     let savedMotifsListGroup = (
@@ -70,7 +78,14 @@ function App() {
                         className="float-right"
                         style={{ display: "inline-block" }}
                     >
-                        {motif.savedDate.toLocaleString()}
+                        {motif.savedDate.toLocaleString()}{" "}
+                        <Button
+                            onClick={() => handleDelete(motif.name)}
+                            variant="outline-danger"
+                            size="sm"
+                        >
+                            ×
+                        </Button>
                     </div>
                 </ListGroup.Item>
             ))}
@@ -133,7 +148,7 @@ function App() {
                             value={savingMotifName}
                         />
                         <InputGroup.Append>
-                            <Button onClick={handleOpen} variant="primary">
+                            <Button onClick={handleLoad} variant="primary">
                                 Open
                             </Button>
                         </InputGroup.Append>
