@@ -162,7 +162,7 @@ def upload_host(filename):
     """
     log(f"Uploading temporary host {filename}...")
     file_id = mongo.save_file(filename, request.files["file"])
-    mongo.db.hosts.insert_one(
+    inserted_id = mongo.db.hosts.insert_one(
         {
             "name": filename,
             "file_id": str(file_id),
@@ -172,7 +172,7 @@ def upload_host(filename):
     )
     log(f"  Added {filename} to database.")
 
-    return jsonify({"status": "OK"})
+    return jsonify({"status": "OK", "inserted": str(inserted_id)})
 
 
 if __name__ == "__main__":
