@@ -2,8 +2,8 @@
 version: "2"
 
 services:
+    # Serve a static React app from motif-studio/ with nginx.
     web:
-        # Serves a static React app from motif-studio/.
         build:
             context: ./motif-studio
             dockerfile: Dockerfile
@@ -12,10 +12,22 @@ services:
         links:
             - motifstudio
 
+    # Run a Flask-based web server on port 5000, only visible to web.
     motifstudio:
-        # Run a Flask-based web server on port 5000, only visible to web.
         build:
             context: ./server
-            dockerfile: Dockerfile.simple
+            dockerfile: Dockerfile
         ports:
             - "5000:5000"
+        links:
+            # Link to the mongodb instance:
+            - mongodb
+
+    # Run a MongoDB database on port 27017:
+    mongodb:
+        image: mongo:3.2
+        ports:
+            - "27017:27017"
+        # volumes:
+        #     # Use a volume called motifstudio-data to store the database:
+        #     - /motifstudio-data:/data/db

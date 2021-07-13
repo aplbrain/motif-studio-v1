@@ -1,63 +1,76 @@
-import os
-from server.hosts import HostProvider
-from typing import List
+import glob
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_pymongo import PyMongo
+from gridfs import GridFS
+
 import networkx as nx
 import pandas as pd
-from dotmotif import Motif
-
-from hosts import (
-    GrandIsoProvider,
-    NeuPrintProvider,
-    MotifStudioHosts,
-    get_hosts_from_mossdb_prefix,
-)
+from dotmotif import Motif, GrandIsoExecutor
 
 __version__ = "0.1.0"
+MONGO_URI = "mongodb://mongodb:27017/motifstudio"
 
+
+def cursor_to_dictlist(cursor):
+    return [
+        {k: (str(v) if k == "_id" else v) for k, v in dict(r).items()} for r in cursor
+    ]
+
+
+def log(*args, **kwargs):
+    print(*args, **kwargs, flush=True)
+
+
+log("Connecting to database...")
 
 APP = Flask(__name__)
+APP.config["MONGO_URI"] = MONGO_URI
+mongo = PyMongo(APP)
 CORS(APP)
 
+log("Loading hosts...")
 
-print("Loading hosts...")
+for graph_file in glob.glob("graphs/*.graphml"):
+    log(f"* Checking {graph_file}...")
+    # Don't re-add the graph if it's already there
+    if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1].split(".")[0]}):
+        log(f"  {graph_file} already in database")
+    else:
 
-hosts: List[HostProvider] = [
-    GrandIsoProvider(
-        graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml"),
-        uri="file://takemura",
-        name="Takemura et al Medulla",
-    ),
-    *get_hosts_from_mossdb_prefix("file://graphs/"),
-    *get_hosts_from_mossdb_prefix("file://neurodata.io/braingraphs/"),
-]
+        file_id = mongo.save_file(
+            graph_file,
+            open(graph_file, "rb"),
+        )
+        mongo.db.hosts.insert_one(
+            {
+                "name": graph_file.split("/")[-1].split(".")[0],
+                "file_id": str(file_id),
+                "uri": f"file://{graph_file}",
+            }
+        )
+        log(f"  Added {graph_file} to database.")
 
-if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
-    print("Connecting to neuPrint host...")
-    hosts.append(NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")))
 
-
-HOSTS = MotifStudioHosts(hosts)
-
-print(f"Loaded with {len(HOSTS)} host graphs.")
+log(f"Loaded with {mongo.db.hosts.count()} host graphs.")
 
 
 @APP.route("/")
 def index():
-    return jsonify({"server_version": __version__})
+    """
+    The API root.
+
+    Returns information about the server.
+    """
+    return jsonify({"server_version": __version__, "mongo_uri": MONGO_URI})
 
 
 @APP.route("/hosts", methods=["GET"])
 def get_hosts():
-    return jsonify(
-        {
-            "hosts": [
-                {"uri": host.get_uri(), "name": host.get_name()}
-                for host in HOSTS.get_hosts()
-            ]
-        }
-    )
+    """
+    Get a list of all hosts.
+    """
+    return jsonify({"hosts": cursor_to_dictlist(mongo.db.hosts.find())})
 
 
 @APP.route("/parse", methods=["POST"])
@@ -110,9 +123,19 @@ def execute_motif_on_host():
     json_g = nx.readwrite.node_link_data(nx_g)
 
     try:
-        host = HOSTS.get_host(payload["hostID"])
-    except:
-        return jsonify({"status": "Failed to find specified host graph."}), 500
+        g = nx.read_graphml(
+            GridFS(mongo.db).get(
+                mongo.db.hosts.find_one({"uri": payload["hostID"]})["file_id"]
+            )
+        )
+        host = GrandIsoExecutor(graph=g)
+    except Exception as e:
+        return (
+            jsonify(
+                {"status": "Failed to find specified host graph.", "error": str(e)}
+            ),
+            500,
+        )
 
     results = pd.DataFrame(host.find(motif))
 
