@@ -1,0 +1,21 @@
+# Docker-Compose file.
+version: "2"
+
+services:
+    web:
+        # Serves a static React app from motif-studio/.
+        build:
+            context: ./motif-studio
+            dockerfile: Dockerfile
+        ports:
+            - "80:80"
+        links:
+            - motifstudio
+
+    motifstudio:
+        # Run a Flask-based web server on port 5000, only visible to web.
+        build:
+            context: ./server
+            dockerfile: Dockerfile.simple
+        ports:
+            - "5000:5000"

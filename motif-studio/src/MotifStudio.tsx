@@ -1,20 +1,13 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import _ from "lodash";
-import {
-    Alert,
-    Button,
-    Card,
-    Col,
-    Form,
-    Row,
-    Tab,
-    Table,
-    Tabs,
-} from "react-bootstrap";
+import { Alert, Button, Card, Col, Form, Row, Table } from "react-bootstrap";
 import { ControlledEditor, monaco } from "@monaco-editor/react";
 import { Config } from "./Config";
 import MotifVisualizer from "./MotifVisualizer";
 import { CSVLink } from "react-csv";
+import Upload from "rc-upload";
+
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 import { toast } from "react-toastify";
 
@@ -36,11 +29,6 @@ const uriWithParam = (baseUrl: string, params: RequestParamType): string => {
     }
     Url.search = urlParams.toString();
     return Url.toString();
-};
-
-const base64 = {
-    decode: (s: any) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0)),
-    encode: (b: any) => btoa(String.fromCharCode(...new Uint8Array(b))),
 };
 
 type _propsType = { motifText?: string; requestedView?: string };
@@ -293,7 +281,7 @@ export class MotifStudio extends Component<
             <Card style={{ margin: "1em" }}>
                 <Card.Body>
                     <Form.Group controlId="form.dataset">
-                        <Form.Label>Dataset</Form.Label>
+                        <Form.Label>Choose a Dataset...</Form.Label>
                         <Form.Control
                             onChange={this.onDatasetChange}
                             as="select"
@@ -311,7 +299,33 @@ export class MotifStudio extends Component<
                                 </option>
                             ))}
                         </Form.Control>
+                        <Upload
+                            action={(file) =>
+                                `${Config.api.baseURL}/hosts/upload/${file.name}`
+                            }
+                            accept={".graphml, .xml"}
+                            openFileDialogOnClick={true}
+                            onSuccess={(res, file) => {
+                                this.setState({
+                                    // @ts-ignore
+                                    selectedDataset: res.uri,
+                                });
+                            }}
+                            onError={(err) => {
+                                toast.error(`Upload failed: ${err}`);
+                            }}
+                        >
+                            <Button
+                                block
+                                style={{ marginTop: "0.5em" }}
+                                variant={"secondary"}
+                            >
+                                <FaCloudUploadAlt size="1.5em" /> Upload Custom
+                                Host Graph
+                            </Button>
+                        </Upload>
                     </Form.Group>
+                    <hr />
                     <Button
                         variant="primary"
                         block
@@ -320,7 +334,13 @@ export class MotifStudio extends Component<
                             !this.state.selectedDataset || !this.state.motifText
                         }
                     >
-                        {this.state.loading ? "Running..." : "Run"}
+                        {this.state.loading
+                            ? "Running..."
+                            : `Run ${
+                                  this.state.selectedDataset
+                                      ? "on " + this.state.selectedDataset
+                                      : ""
+                              }`}
                     </Button>
                 </Card.Body>
             </Card>
@@ -377,22 +397,20 @@ export class MotifStudio extends Component<
                                     )
                                 )
                                     .slice(0, 100)
-                                    .map((row, i) => {
-                                        return (
-                                            <tr key={i}>
-                                                <td>{i}</td>
-                                                {row.map((m) => (
-                                                    <td
-                                                        // @ts-ignore
-                                                        key={m}
-                                                    >
-                                                        {/*@ts-ignore*/}
-                                                        {m}
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        );
-                                    })}
+                                    .map((row, i) => (
+                                        <tr key={i}>
+                                            <td>{i}</td>
+                                            {row.map((m) => (
+                                                <td
+                                                    // @ts-ignore
+                                                    key={m}
+                                                >
+                                                    {/*@ts-ignore*/}
+                                                    {m}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
                             </tbody>
                         </Table>
                     </div>
