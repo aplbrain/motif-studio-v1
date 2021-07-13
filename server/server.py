@@ -80,7 +80,7 @@ def get_hosts():
     return jsonify(
         {
             "hosts": cursor_to_dictlist(
-                mongo.db.hosts.find({"visibility": {"$neq": "private"}})
+                mongo.db.hosts.find({"visibility": {"$ne": "private"}})
             )
         }
     )

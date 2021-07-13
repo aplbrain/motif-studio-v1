@@ -6,7 +6,7 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
-ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:5000 --log-level debug --capture-output"
+ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:5000"
 COPY . .
 
 EXPOSE 5000
