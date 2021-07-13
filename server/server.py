@@ -1,7 +1,9 @@
 import glob
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
+
 from gridfs import GridFS
 
 import networkx as nx
@@ -39,7 +41,7 @@ for graph_file in glob.glob("graphs/*.graphml"):
     else:
 
         file_id = mongo.save_file(
-            graph_file,
+            graph_file.split("/")[-1].split(".")[0],
             open(graph_file, "rb"),
         )
         mongo.db.hosts.insert_one(
@@ -125,7 +127,7 @@ def execute_motif_on_host():
     try:
         g = nx.read_graphml(
             GridFS(mongo.db).get(
-                mongo.db.hosts.find_one({"uri": payload["hostID"]})["file_id"]
+                ObjectId(mongo.db.hosts.find_one({"uri": payload["hostID"]})["file_id"])
             )
         )
         host = GrandIsoExecutor(graph=g)
