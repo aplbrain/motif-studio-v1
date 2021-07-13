@@ -31,7 +31,7 @@ APP = Flask(__name__)
 APP.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(APP)
 CORS(APP)
-mongo.db.hosts.create_index({"expire": 1}, {"expireAfterSeconds": 0})
+mongo.db.hosts.ensure_index("expire", expireAfterSeconds=0)
 
 
 def provision_database():
@@ -54,6 +54,7 @@ def provision_database():
                     "file_id": str(file_id),
                     "uri": f"file://{graph_file}",
                     "visibility": "public",
+                    "inserted": datetime.datetime.utcnow(),
                     "expire": datetime.datetime.utcnow()
                     + datetime.timedelta(days=9999),
                 }
@@ -170,6 +171,7 @@ def upload_host(filename):
         {
             "name": filename,
             "file_id": str(file_id),
+            "inserted": datetime.datetime.utcnow(),
             "visibility": "private",
             "expire": datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
             "uri": f"file://{str(file_id)}_{filename}",
