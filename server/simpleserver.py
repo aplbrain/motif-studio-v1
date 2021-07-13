@@ -1,4 +1,5 @@
 import os
+from server.hosts import HostProvider
 from typing import List
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -6,7 +7,12 @@ import networkx as nx
 import pandas as pd
 from dotmotif import Motif
 
-from hosts import GrandIsoProvider, NeuPrintProvider, MotifStudioHosts, get_hosts_from_mossdb_prefix
+from hosts import (
+    GrandIsoProvider,
+    NeuPrintProvider,
+    MotifStudioHosts,
+    get_hosts_from_mossdb_prefix,
+)
 
 __version__ = "0.1.0"
 
@@ -14,16 +20,10 @@ __version__ = "0.1.0"
 APP = Flask(__name__)
 CORS(APP)
 
-# HOSTS: List[HostProvider] = {
-#     "file://kakaria-bivort": lambda: GrandIsoExecutor(
-#         graph=nx.read_graphml("graphs/Kakaria-Bivort-PBa.graphml")
-#     ),
-#     "file://takemura": lambda: ,
-# }
 
 print("Loading hosts...")
 
-hosts = [
+hosts: List[HostProvider] = [
     GrandIsoProvider(
         graph=nx.read_graphml("graphs/drosophila_medulla_1-no-dotnotation.graphml"),
         uri="file://takemura",
@@ -41,6 +41,7 @@ if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
 HOSTS = MotifStudioHosts(hosts)
 
 print(f"Loaded with {len(HOSTS)} host graphs.")
+
 
 @APP.route("/")
 def index():
