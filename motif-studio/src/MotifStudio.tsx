@@ -31,11 +31,6 @@ const uriWithParam = (baseUrl: string, params: RequestParamType): string => {
     return Url.toString();
 };
 
-const base64 = {
-    decode: (s: any) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0)),
-    encode: (b: any) => btoa(String.fromCharCode(...new Uint8Array(b))),
-};
-
 type _propsType = { motifText?: string; requestedView?: string };
 
 export class MotifStudio extends Component<
@@ -310,6 +305,15 @@ export class MotifStudio extends Component<
                             }
                             accept={".graphml, .xml"}
                             openFileDialogOnClick={true}
+                            onSuccess={(res, file) => {
+                                this.setState({
+                                    // @ts-ignore
+                                    selectedDataset: res.uri,
+                                });
+                            }}
+                            onError={(err) => {
+                                toast.error(`Upload failed: ${err}`);
+                            }}
                         >
                             <Button
                                 block
@@ -330,7 +334,13 @@ export class MotifStudio extends Component<
                             !this.state.selectedDataset || !this.state.motifText
                         }
                     >
-                        {this.state.loading ? "Running..." : "Run"}
+                        {this.state.loading
+                            ? "Running..."
+                            : `Run ${
+                                  this.state.selectedDataset
+                                      ? "on " + this.state.selectedDataset
+                                      : ""
+                              }`}
                     </Button>
                 </Card.Body>
             </Card>

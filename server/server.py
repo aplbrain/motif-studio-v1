@@ -167,12 +167,18 @@ def upload_host(filename):
             "name": filename,
             "file_id": str(file_id),
             "visibility": "private",
-            "uri": f"file://{filename}",
+            "uri": f"file://{str(file_id)}_{filename}",
         }
-    )
+    ).inserted_id
     log(f"  Added {filename} to database.")
 
-    return jsonify({"status": "OK", "inserted": str(inserted_id)})
+    return jsonify(
+        {
+            "status": "OK",
+            "inserted": str(inserted_id),
+            "uri": f"file://{str(file_id)}_{filename}",
+        }
+    )
 
 
 if __name__ == "__main__":
