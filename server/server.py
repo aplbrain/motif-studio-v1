@@ -59,6 +59,9 @@ def provision_database():
     log(f"Loaded with {mongo.db.hosts.count()} host graphs.")
 
 
+provision_database()
+
+
 @APP.route("/")
 def index():
     """

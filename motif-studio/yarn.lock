@@ -1085,6 +1085,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.10.1":
+  version "7.14.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.6.tgz#535203bc0892efc7dec60bdc27b2ecf6e409062d"
+  integrity sha512-/PCB2uJ7oM44tz8YhC4Z/6PeOKXp4K588f+5M3clr1M4zbqztlo0XEfJ2LEzj/FgwfgGcIdl8n7YYjTCI0BYwg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -3282,6 +3289,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.5:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 classnames@^2.2.6:
   version "2.2.6"
@@ -9042,6 +9054,24 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+rc-upload@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/rc-upload/-/rc-upload-4.3.1.tgz#d6ee66b8bd1e1dd2f78526c486538423f7e7ed84"
+  integrity sha512-W8Iyv0LRyEnFEzpv90ET/i1XG2jlPzPxKkkOVtDfgh9c3f4lZV770vgpUfiyQza+iLtQLVco3qIvgue8aDiOsQ==
+  dependencies:
+    "@babel/runtime" "^7.10.1"
+    classnames "^2.2.5"
+    rc-util "^5.2.0"
+
+rc-util@^5.2.0:
+  version "5.13.2"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.13.2.tgz#a8a0bb77743351841ba8bed6393e03b8d2f685c8"
+  integrity sha512-eYc71XXGlp96RMzg01Mhq/T3BL6OOVTDSS0urFEuvpi+e7slhJRhaHGCKy2hqJm18m9ff7VoRoptplKu60dYog==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    react-is "^16.12.0"
+    shallowequal "^1.1.0"
+
 react-app-polyfill@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-2.0.0.tgz#a0bea50f078b8a082970a9d853dc34b6dcc6a3cf"
@@ -9137,7 +9167,7 @@ react-graph-vis@^1.0.5:
     uuid "^2.0.1"
     vis-network "^5.1.1"
 
-react-is@^16.3.2, react-is@^16.8.1:
+react-is@^16.12.0, react-is@^16.3.2, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -9951,6 +9981,11 @@ shallow-clone@^3.0.0:
   integrity sha512-/6KqX+GVUdqPuPPd2LxDDxzX6CAbjJehAAOKlNpqqUpAqPM6HeL8f+o3a+JsyGjn2lv0WY8UsTgUJjU9Ok55NA==
   dependencies:
     kind-of "^6.0.2"
+
+shallowequal@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
 shebang-command@^1.2.0:
   version "1.2.0"
