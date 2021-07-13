@@ -19,19 +19,3 @@ services:
             dockerfile: Dockerfile.simple
         ports:
             - "5000:5000"
-# services:
-#   web:
-#     build: .
-#     ports:
-#       - "5000:5000"
-#     volumes:
-#       - .:/code
-#     links:
-#       - redis
-#     command: python app.py
-#
-#   redis:
-#     image: redis
-#     ports:
-#       - "6379"
-#

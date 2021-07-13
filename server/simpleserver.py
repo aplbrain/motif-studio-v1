@@ -1,5 +1,4 @@
 import os
-from server.hosts import HostProvider
 from typing import List
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -8,6 +7,7 @@ import pandas as pd
 from dotmotif import Motif
 
 from hosts import (
+    HostProvider,
     GrandIsoProvider,
     NeuPrintProvider,
     MotifStudioHosts,
@@ -29,13 +29,13 @@ hosts: List[HostProvider] = [
         uri="file://takemura",
         name="Takemura et al Medulla",
     ),
-    *get_hosts_from_mossdb_prefix("file://graphs/"),
-    *get_hosts_from_mossdb_prefix("file://neurodata.io/braingraphs/"),
+    # *get_hosts_from_mossdb_prefix("file://graphs/"),
+    # *get_hosts_from_mossdb_prefix("file://neurodata.io/braingraphs/"),
 ]
 
-if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
-    print("Connecting to neuPrint host...")
-    hosts.append(NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")))
+# if os.getenv("NEUPRINT_APPLICATION_CREDENTIALS"):
+#     print("Connecting to neuPrint host...")
+#     hosts.append(NeuPrintProvider(token=os.getenv("NEUPRINT_APPLICATION_CREDENTIALS")))
 
 
 HOSTS = MotifStudioHosts(hosts)

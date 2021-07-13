@@ -4,10 +4,11 @@ WORKDIR /app
 
 COPY requirements.simple.txt ./
 RUN pip install -r requirements.simple.txt
+RUN pip install gunicorn
 
-ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0"
+ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:5000"
 COPY . .
 
 EXPOSE 5000
 
-CMD [ "gunicorn", "app:app" ]
+CMD [ "gunicorn", "simpleserver:APP" ]
