@@ -31,30 +31,32 @@ APP.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(APP)
 CORS(APP)
 
-log("Loading hosts...")
 
-for graph_file in glob.glob("graphs/*.graphml"):
-    log(f"* Checking {graph_file}...")
-    # Don't re-add the graph if it's already there
-    if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1].split(".")[0]}):
-        log(f"  {graph_file} already in database")
-    else:
+def provision_database():
+    log("Loading hosts...")
 
-        file_id = mongo.save_file(
-            graph_file.split("/")[-1].split(".")[0],
-            open(graph_file, "rb"),
-        )
-        mongo.db.hosts.insert_one(
-            {
-                "name": graph_file.split("/")[-1].split(".")[0],
-                "file_id": str(file_id),
-                "uri": f"file://{graph_file}",
-            }
-        )
-        log(f"  Added {graph_file} to database.")
+    for graph_file in glob.glob("graphs/*.graphml"):
+        log(f"* Checking {graph_file}...")
+        # Don't re-add the graph if it's already there
+        if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1].split(".")[0]}):
+            log(f"  {graph_file} already in database")
+        else:
 
+            file_id = mongo.save_file(
+                graph_file.split("/")[-1].split(".")[0],
+                open(graph_file, "rb"),
+            )
+            mongo.db.hosts.insert_one(
+                {
+                    "name": graph_file.split("/")[-1].split(".")[0],
+                    "file_id": str(file_id),
+                    "uri": f"file://{graph_file}",
+                    "visibility": "public",
+                }
+            )
+            log(f"  Added {graph_file} to database.")
 
-log(f"Loaded with {mongo.db.hosts.count()} host graphs.")
+    log(f"Loaded with {mongo.db.hosts.count()} host graphs.")
 
 
 @APP.route("/")
@@ -72,7 +74,13 @@ def get_hosts():
     """
     Get a list of all hosts.
     """
-    return jsonify({"hosts": cursor_to_dictlist(mongo.db.hosts.find())})
+    return jsonify(
+        {
+            "hosts": cursor_to_dictlist(
+                mongo.db.hosts.find({"visibility": {"$neq": "private"}})
+            )
+        }
+    )
 
 
 @APP.route("/parse", methods=["POST"])
@@ -142,6 +150,26 @@ def execute_motif_on_host():
     results = pd.DataFrame(host.find(motif))
 
     return jsonify({"motif": json_g, "results": results.to_dict()})
+
+
+@APP.route("/hosts/upload/<path:filename>", methods=["POST"])
+def upload_host(filename):
+    """
+    Upload a host graph to the server.
+    """
+    log(f"Uploading temporary host {filename}...")
+    file_id = mongo.save_file(filename, request.files["file"])
+    mongo.db.hosts.insert_one(
+        {
+            "name": filename,
+            "file_id": str(file_id),
+            "visibility": "private",
+            "uri": f"file://{filename}",
+        }
+    )
+    log(f"  Added {filename} to database.")
+
+    return jsonify({"status": "OK"})
 
 
 if __name__ == "__main__":
