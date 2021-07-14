@@ -138,7 +138,7 @@ def execute_motif_on_host():
 
     motif = Motif(
         motif_text,
-        exclude_automorphisms=payload.get("allowAutomorphisms", True),
+        exclude_automorphisms=(not payload.get("allowAutomorphisms", False)),
         ignore_direction=payload.get("ignoreDirection", False),
     )
 

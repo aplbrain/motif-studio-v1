@@ -31,7 +31,11 @@ const uriWithParam = (baseUrl: string, params: RequestParamType): string => {
     return Url.toString();
 };
 
-type _propsType = { motifText?: string; requestedView?: string };
+type _propsType = {
+    motifText?: string;
+    requestedView?: string;
+    selectedDataset?: string;
+};
 
 export class MotifStudio extends Component<
     _propsType,
@@ -62,7 +66,7 @@ export class MotifStudio extends Component<
             executionDuration: 0,
             loading: false,
             hosts: [],
-            selectedDataset: undefined,
+            selectedDataset: props.selectedDataset || undefined,
 
             // Motif search settings:
             allowAutomorphisms: false,
@@ -72,10 +76,7 @@ export class MotifStudio extends Component<
         this.setMotifText = this.setMotifText.bind(this);
         this.onDatasetChange = this.onDatasetChange.bind(this);
         this.handlePressExecute = this.handlePressExecute.bind(this);
-        this.updateMotifJSON = _.throttle(
-            this.updateMotifJSON.bind(this),
-            Config.api.throttleMs
-        );
+        this.updateMotifJSON = _.throttle(this.updateMotifJSON.bind(this), Config.api.throttleMs);
     }
 
     setMotifText(value: string) {
@@ -116,10 +117,12 @@ export class MotifStudio extends Component<
                 {
                     path: uriWithParam(window.location.toString(), {
                         mS: encodeURIComponent(urlVal),
+                        selectedDataset: encodeURIComponent(this.state.selectedDataset || ""),
                     }),
                 },
                 "Motif Studio",
                 uriWithParam(window.location.toString(), {
+                    selectedDataset: encodeURIComponent(this.state.selectedDataset || ""),
                     mS: encodeURIComponent(urlVal),
                 })
             );
@@ -129,15 +132,17 @@ export class MotifStudio extends Component<
     }
 
     componentDidMount() {
-        let keys = window.location.search.slice(1).toString().split("=");
+        let keys = window.location.search.slice(1).toString().split(/[=&]/g);
         let urlState: { [name: string]: string } = {};
         for (let i = 0; i < keys.length; i += 2) {
-            urlState[keys[i]] = decodeURIComponent(
-                decodeURIComponent(keys[i + 1])
-            );
+            console.log(keys);
+            urlState[keys[i]] = decodeURIComponent(decodeURIComponent(keys[i + 1]));
         }
 
         this.setState({ motifText: urlState.mS });
+        if (urlState.selectedDataset) {
+            this.setState({ selectedDataset: urlState.selectedDataset });
+        }
 
         // Get a list of all valid hosts:
         fetch(Config.api.baseURL + "/hosts")
@@ -146,9 +151,7 @@ export class MotifStudio extends Component<
                 this.setState({ hosts: res.hosts });
             })
             .catch((res) => {
-                toast.error(
-                    `Could not get a list of available host graphs: ${res}`
-                );
+                toast.error(`Could not get a list of available host graphs: ${res}`);
             });
 
         // Prepare the code editor.
@@ -193,12 +196,7 @@ export class MotifStudio extends Component<
 
                 this.updateMotifJSON();
             })
-            .catch((error) =>
-                console.error(
-                    "An error occurred during initialization of Monaco: ",
-                    error
-                )
-            );
+            .catch((error) => console.error("An error occurred during initialization of Monaco: ", error));
     }
 
     handlePressExecute() {
@@ -237,6 +235,20 @@ export class MotifStudio extends Component<
         this.setState({
             selectedDataset: ev.target.value,
         });
+
+        window.history.replaceState(
+            {
+                path: uriWithParam(window.location.toString(), {
+                    mS: encodeURIComponent(this.state.motifText || ""),
+                    selectedDataset: encodeURIComponent(ev.target.value || ""),
+                }),
+            },
+            "Motif Studio",
+            uriWithParam(window.location.toString(), {
+                mS: encodeURIComponent(this.state.motifText || ""),
+                selectedDataset: encodeURIComponent(ev.target.value || ""),
+            })
+        );
     }
 
     render() {
@@ -301,7 +313,11 @@ export class MotifStudio extends Component<
                             value={this.state.selectedDataset}
                             custom
                         >
-                            <option hidden disabled selected value={""}>
+                            <option
+                                // hidden disabled
+                                selected
+                                value={""}
+                            >
                                 {" "}
                                 No dataset selected...{" "}
                             </option>
@@ -312,12 +328,29 @@ export class MotifStudio extends Component<
                             ))}
                         </Form.Control>
                         <Upload
-                            action={(file) =>
-                                `${Config.api.baseURL}/hosts/upload/${file.name}`
-                            }
+                            action={(file) => `${Config.api.baseURL}/hosts/upload/${file.name}`}
                             accept={".graphml, .xml"}
                             openFileDialogOnClick={true}
                             onSuccess={(res, file) => {
+                                window.history.replaceState(
+                                    {
+                                        path: uriWithParam(window.location.toString(), {
+                                            mS: encodeURIComponent(this.state.motifText || ""),
+                                            selectedDataset: encodeURIComponent(
+                                                // @ts-ignore
+                                                res.uri || ""
+                                            ),
+                                        }),
+                                    },
+                                    "Motif Studio",
+                                    uriWithParam(window.location.toString(), {
+                                        selectedDataset: encodeURIComponent(
+                                            // @ts-ignore
+                                            res.uri || ""
+                                        ),
+                                        mS: encodeURIComponent(this.state.motifText || ""),
+                                    })
+                                );
                                 this.setState({
                                     // @ts-ignore
                                     selectedDataset: res.uri,
@@ -327,13 +360,8 @@ export class MotifStudio extends Component<
                                 toast.error(`Upload failed: ${err}`);
                             }}
                         >
-                            <Button
-                                block
-                                style={{ marginTop: "0.5em" }}
-                                variant={"secondary"}
-                            >
-                                <FaCloudUploadAlt size="1.5em" /> Upload Custom
-                                Host Graph
+                            <Button block style={{ marginTop: "0.5em" }} variant={"secondary"}>
+                                <FaCloudUploadAlt size="1.5em" /> Upload Custom Host Graph
                             </Button>
                         </Upload>
                     </Form.Group>
@@ -353,14 +381,10 @@ export class MotifStudio extends Component<
                                     <b>Allow automorphisms</b>
                                     <div>
                                         <small>
-                                            Permit automorphisms in the results
-                                            set. For more information on
+                                            Permit automorphisms in the results set. For more information on
                                             automorphisms, read{" "}
-                                            <a href="https://github.com/aplbrain/dotmotif/wiki/Automorphisms">
-                                                here
-                                            </a>
-                                            . Leaving this off tends to return
-                                            the most intuitive results.
+                                            <a href="https://github.com/aplbrain/dotmotif/wiki/Automorphisms">here</a>.
+                                            Leaving this off tends to return the most intuitive results.
                                         </small>
                                     </div>
                                 </div>
@@ -380,10 +404,8 @@ export class MotifStudio extends Component<
                                     <b>Ignore direction</b>
                                     <div>
                                         <small>
-                                            Whether to ignore the direction of
-                                            edges and perform an undirected
-                                            search. Note that edge direction can
-                                            interact with autormophism groups in
+                                            Whether to ignore the direction of edges and perform an undirected search.
+                                            Note that edge direction can interact with autormophism groups in
                                             interesting ways.
                                         </small>
                                     </div>
@@ -396,25 +418,17 @@ export class MotifStudio extends Component<
                         variant="primary"
                         block
                         onClick={this.handlePressExecute}
-                        disabled={
-                            !this.state.selectedDataset || !this.state.motifText
-                        }
+                        disabled={!this.state.selectedDataset || !this.state.motifText}
                     >
                         {this.state.loading
                             ? "Running..."
-                            : `Run ${
-                                  this.state.selectedDataset
-                                      ? "on " + this.state.selectedDataset
-                                      : ""
-                              }`}
+                            : `Run ${this.state.selectedDataset ? "on " + this.state.selectedDataset : ""}`}
                     </Button>
                 </Card.Body>
             </Card>
         );
 
-        let resultKeys = this.state.results
-            ? Object.keys(this.state.results)
-            : [];
+        let resultKeys = this.state.results ? Object.keys(this.state.results) : [];
 
         let resourceReadoutTable = (
             <div>
@@ -431,18 +445,19 @@ export class MotifStudio extends Component<
                                     Object.values(this.state.results)[0]
                                 ).length
                             }{" "}
-                            results in {this.state.executionDuration / 1000}{" "}
-                            seconds.{" "}
+                            results in {this.state.executionDuration / 1000} seconds.{" "}
                             <CSVLink
                                 data={_.zip(
-                                    ...Object.values(this.state.results).map(
-                                        (f) =>
-                                            // @ts-ignore
-                                            Object.values(f)
+                                    ...Object.values(this.state.results).map((f) =>
+                                        // @ts-ignore
+                                        Object.values(f)
                                     )
                                 )}
                                 headers={resultKeys}
-                                filename={"motif-studio-results.csv"}
+                                filename={`motif-studio-results-${this.state.selectedDataset?.replace(
+                                    "file://",
+                                    ""
+                                )}.csv`}
                             >
                                 Download as CSV
                             </CSVLink>
@@ -457,11 +472,7 @@ export class MotifStudio extends Component<
                                 </tr>
                             </thead>
                             <tbody>
-                                {_.zip(
-                                    ...resultKeys.map((k) =>
-                                        Object.values(this.state.results[k])
-                                    )
-                                )
+                                {_.zip(...resultKeys.map((k) => Object.values(this.state.results[k])))
                                     .slice(0, 100)
                                     .map((row, i) => (
                                         <tr key={i}>
@@ -489,7 +500,11 @@ export class MotifStudio extends Component<
                 <Row style={{ minHeight: "40vh" }}>
                     <Col>{executionForm}</Col>
                     <Col>
-                        <MotifVisualizer graph={this.state.motifJSON} />
+                        <Card style={{ margin: "1em", minHeight: "40vh" }}>
+                            <Card.Body>
+                                <MotifVisualizer graph={this.state.motifJSON} />
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
                 <Row>
@@ -517,11 +532,7 @@ export class MotifStudio extends Component<
                         onChange={this.handleInputChanged}
                     />
                 </Pane>
-                <Pane>
-                    {this.props.requestedView === "Build"
-                        ? motifVisualizerTab
-                        : motifRunTab}
-                </Pane>
+                <Pane>{this.props.requestedView === "Build" ? motifVisualizerTab : motifRunTab}</Pane>
             </SplitPane>
         );
     }
