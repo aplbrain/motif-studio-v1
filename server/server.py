@@ -136,7 +136,12 @@ def execute_motif_on_host():
     # constructor from looking on disk and doing anything nefarious.
     motif_text = "# Generated in MotifStudio. \n" + payload["motif"]
 
-    motif = Motif(motif_text)
+    motif = Motif(
+        motif_text,
+        exclude_automorphisms=payload.get("allowAutomorphisms", True),
+        ignore_direction=payload.get("ignoreDirection", False),
+    )
+
     nx_g = motif.to_nx()
     json_g = nx.readwrite.node_link_data(nx_g)
 
