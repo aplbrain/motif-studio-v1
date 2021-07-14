@@ -6,16 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { MotifStudio } from "./MotifStudio";
 import { toast, ToastContainer } from "react-toastify";
-import {
-    Button,
-    Dropdown,
-    FormControl,
-    InputGroup,
-    ListGroup,
-    Modal,
-    Nav,
-    Navbar,
-} from "react-bootstrap";
+import { Button, Dropdown, FormControl, InputGroup, ListGroup, Modal, Nav, Navbar } from "react-bootstrap";
 import { LocalStorageMotifStore } from "./store";
 
 import { BiLinkExternal } from "react-icons/bi";
@@ -33,9 +24,7 @@ function App() {
     let motifText = studio?.current?.state?.motifText;
 
     let savedMotifs = Object.values(db.list()).sort((left, right) =>
-        new Date(left.savedDate)
-            .toISOString()
-            .localeCompare(new Date(right.savedDate).toISOString())
+        new Date(left.savedDate).toISOString().localeCompare(new Date(right.savedDate).toISOString())
     );
 
     let handleSave = () => {
@@ -71,21 +60,11 @@ function App() {
     let savedMotifsListGroup = (
         <ListGroup>
             {savedMotifs.map((motif) => (
-                <ListGroup.Item
-                    key={motif.name}
-                    onClick={(ev) => setSavingMotifName(motif.name)}
-                >
+                <ListGroup.Item key={motif.name} onClick={(ev) => setSavingMotifName(motif.name)}>
                     {motif.name}{" "}
-                    <div
-                        className="float-right"
-                        style={{ display: "inline-block" }}
-                    >
+                    <div className="float-right" style={{ display: "inline-block" }}>
                         {motif.savedDate.toLocaleString()}{" "}
-                        <Button
-                            onClick={() => handleDelete(motif.name)}
-                            variant="outline-danger"
-                            size="sm"
-                        >
+                        <Button onClick={() => handleDelete(motif.name)} variant="outline-danger" size="sm">
                             ×
                         </Button>
                     </div>
@@ -96,10 +75,7 @@ function App() {
 
     let saveModal = (
         <>
-            <Modal
-                show={saveModalVisible}
-                onHide={() => setSaveModalVisible(false)}
-            >
+            <Modal show={saveModalVisible} onHide={() => setSaveModalVisible(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Save this motif</Modal.Title>
                 </Modal.Header>
@@ -111,9 +87,7 @@ function App() {
                         <FormControl
                             placeholder="Filename"
                             aria-label="Filename"
-                            onChange={(ev) =>
-                                setSavingMotifName(ev.target.value)
-                            }
+                            onChange={(ev) => setSavingMotifName(ev.target.value)}
                             value={savingMotifName}
                         />
                         <InputGroup.Append>
@@ -129,10 +103,7 @@ function App() {
 
     let openModal = (
         <>
-            <Modal
-                show={openModalVisible}
-                onHide={() => setOpenModalVisible(false)}
-            >
+            <Modal show={openModalVisible} onHide={() => setOpenModalVisible(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Load a motif</Modal.Title>
                 </Modal.Header>
@@ -144,9 +115,7 @@ function App() {
                         <FormControl
                             placeholder="Filename"
                             aria-label="Filename"
-                            onChange={(ev) =>
-                                setSavingMotifName(ev.target.value)
-                            }
+                            onChange={(ev) => setSavingMotifName(ev.target.value)}
                             value={savingMotifName}
                         />
                         <InputGroup.Append>
@@ -168,33 +137,15 @@ function App() {
                 <Nav className="mr-auto ">
                     <div className="d-flex">
                         <Dropdown>
-                            <Dropdown.Toggle
-                                as={Nav.Link}
-                                active
-                                id="dropdown-basic"
-                            >
+                            <Dropdown.Toggle as={Nav.Link} active id="dropdown-basic">
                                 File
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item
-                                    onClick={() => setOpenModalVisible(true)}
-                                >
-                                    Open
-                                </Dropdown.Item>
-                                <Dropdown.Item
-                                    onClick={() => setSaveModalVisible(true)}
-                                >
-                                    Save
-                                </Dropdown.Item>
+                                <Dropdown.Item onClick={() => setOpenModalVisible(true)}>Open</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setSaveModalVisible(true)}>Save</Dropdown.Item>
                                 <Dropdown.Divider />
-                                <Dropdown.Item
-                                    tag={"a"}
-                                    target="_blank"
-                                    href={
-                                        "https://github.com/aplbrain/dotmotif"
-                                    }
-                                >
+                                <Dropdown.Item tag={"a"} target="_blank" href={"https://github.com/aplbrain/dotmotif"}>
                                     Help &amp; About <BiLinkExternal />
                                 </Dropdown.Item>
                             </Dropdown.Menu>
