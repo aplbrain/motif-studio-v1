@@ -83,9 +83,14 @@ const MotifVisualizer = React.memo(
             },
         };
 
-        let graph = { nodes, edges, physics };
+        let graph = {
+            nodes,
+            edges,
+            physics,
+            options: { autoResize: true, width: "100%", height: "500px" },
+        };
         return (
-            <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ height: "99%" }}>
                 {props.error && props.error.length ? (
                     <code>
                         <b>Errors encountered when building this motif:</b>

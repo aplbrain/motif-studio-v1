@@ -18,6 +18,8 @@ import {
 } from "react-bootstrap";
 import { LocalStorageMotifStore } from "./store";
 
+import { BiLinkExternal } from "react-icons/bi";
+
 function App() {
     let [view, setView] = useState("Run");
     let studio = useRef(null);
@@ -185,13 +187,16 @@ function App() {
                                 >
                                     Save
                                 </Dropdown.Item>
-                                {/* <Dropdown.Divider />
+                                <Dropdown.Divider />
                                 <Dropdown.Item
-                                    disabled={true}
-                                    className={"disabled"}
+                                    tag={"a"}
+                                    target="_blank"
+                                    href={
+                                        "https://github.com/aplbrain/dotmotif"
+                                    }
                                 >
-                                    Share
-                                </Dropdown.Item> */}
+                                    Help &amp; About <BiLinkExternal />
+                                </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         <Nav.Link active onClick={() => setView("Build")}>
