@@ -551,7 +551,11 @@ export class MotifStudio extends Component<
                 <Row style={{ minHeight: "40vh" }}>
                     <Col>{executionForm}</Col>
                     <Col>
-                        <MotifVisualizer graph={this.state.motifJSON} />
+                        <Card style={{ margin: "1em", minHeight: "40vh" }}>
+                            <Card.Body>
+                                <MotifVisualizer graph={this.state.motifJSON} />
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
                 <Row>
