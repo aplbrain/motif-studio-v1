@@ -31,7 +31,11 @@ const uriWithParam = (baseUrl: string, params: RequestParamType): string => {
     return Url.toString();
 };
 
-type _propsType = { motifText?: string; requestedView?: string };
+type _propsType = {
+    motifText?: string;
+    requestedView?: string;
+    selectedDataset?: string;
+};
 
 export class MotifStudio extends Component<
     _propsType,
@@ -62,7 +66,7 @@ export class MotifStudio extends Component<
             executionDuration: 0,
             loading: false,
             hosts: [],
-            selectedDataset: undefined,
+            selectedDataset: props.selectedDataset || undefined,
 
             // Motif search settings:
             allowAutomorphisms: false,
@@ -116,10 +120,16 @@ export class MotifStudio extends Component<
                 {
                     path: uriWithParam(window.location.toString(), {
                         mS: encodeURIComponent(urlVal),
+                        selectedDataset: encodeURIComponent(
+                            this.state.selectedDataset || ""
+                        ),
                     }),
                 },
                 "Motif Studio",
                 uriWithParam(window.location.toString(), {
+                    selectedDataset: encodeURIComponent(
+                        this.state.selectedDataset || ""
+                    ),
                     mS: encodeURIComponent(urlVal),
                 })
             );
@@ -129,15 +139,19 @@ export class MotifStudio extends Component<
     }
 
     componentDidMount() {
-        let keys = window.location.search.slice(1).toString().split("=");
+        let keys = window.location.search.slice(1).toString().split(/[=&]/g);
         let urlState: { [name: string]: string } = {};
         for (let i = 0; i < keys.length; i += 2) {
+            console.log(keys);
             urlState[keys[i]] = decodeURIComponent(
                 decodeURIComponent(keys[i + 1])
             );
         }
 
         this.setState({ motifText: urlState.mS });
+        if (urlState.selectedDataset) {
+            this.setState({ selectedDataset: urlState.selectedDataset });
+        }
 
         // Get a list of all valid hosts:
         fetch(Config.api.baseURL + "/hosts")
@@ -237,6 +251,20 @@ export class MotifStudio extends Component<
         this.setState({
             selectedDataset: ev.target.value,
         });
+
+        window.history.replaceState(
+            {
+                path: uriWithParam(window.location.toString(), {
+                    mS: encodeURIComponent(this.state.motifText || ""),
+                    selectedDataset: encodeURIComponent(ev.target.value || ""),
+                }),
+            },
+            "Motif Studio",
+            uriWithParam(window.location.toString(), {
+                mS: encodeURIComponent(this.state.motifText || ""),
+                selectedDataset: encodeURIComponent(ev.target.value || ""),
+            })
+        );
     }
 
     render() {
@@ -301,7 +329,11 @@ export class MotifStudio extends Component<
                             value={this.state.selectedDataset}
                             custom
                         >
-                            <option hidden disabled selected value={""}>
+                            <option
+                                // hidden disabled
+                                selected
+                                value={""}
+                            >
                                 {" "}
                                 No dataset selected...{" "}
                             </option>
@@ -318,6 +350,33 @@ export class MotifStudio extends Component<
                             accept={".graphml, .xml"}
                             openFileDialogOnClick={true}
                             onSuccess={(res, file) => {
+                                window.history.replaceState(
+                                    {
+                                        path: uriWithParam(
+                                            window.location.toString(),
+                                            {
+                                                mS: encodeURIComponent(
+                                                    this.state.motifText || ""
+                                                ),
+                                                selectedDataset:
+                                                    encodeURIComponent(
+                                                        // @ts-ignore
+                                                        res.uri || ""
+                                                    ),
+                                            }
+                                        ),
+                                    },
+                                    "Motif Studio",
+                                    uriWithParam(window.location.toString(), {
+                                        selectedDataset: encodeURIComponent(
+                                            // @ts-ignore
+                                            res.uri || ""
+                                        ),
+                                        mS: encodeURIComponent(
+                                            this.state.motifText || ""
+                                        ),
+                                    })
+                                );
                                 this.setState({
                                     // @ts-ignore
                                     selectedDataset: res.uri,
@@ -442,7 +501,10 @@ export class MotifStudio extends Component<
                                     )
                                 )}
                                 headers={resultKeys}
-                                filename={"motif-studio-results.csv"}
+                                filename={`motif-studio-results-${this.state.selectedDataset?.replace(
+                                    "file://",
+                                    ""
+                                )}.csv`}
                             >
                                 Download as CSV
                             </CSVLink>
