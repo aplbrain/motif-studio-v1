@@ -45,6 +45,10 @@ export class MotifStudio extends Component<
         executionDuration: number;
         hosts: Array<any>;
         selectedDataset?: string;
+
+        // Motif search settings:
+        allowAutomorphisms: boolean;
+        ignoreDirection: boolean;
     }
 > {
     constructor(props: _propsType) {
@@ -59,6 +63,10 @@ export class MotifStudio extends Component<
             loading: false,
             hosts: [],
             selectedDataset: undefined,
+
+            // Motif search settings:
+            allowAutomorphisms: false,
+            ignoreDirection: false,
         };
         this.handleInputChanged = this.handleInputChanged.bind(this);
         this.setMotifText = this.setMotifText.bind(this);
@@ -203,6 +211,8 @@ export class MotifStudio extends Component<
             body: JSON.stringify({
                 motif: this.state.motifText,
                 hostID: this.state.selectedDataset,
+                allowAutomorphisms: this.state.allowAutomorphisms,
+                ignoreDirection: this.state.ignoreDirection,
             }),
         })
             .then((res) => res.json())
@@ -281,7 +291,9 @@ export class MotifStudio extends Component<
             <Card style={{ margin: "1em" }}>
                 <Card.Body>
                     <Form.Group controlId="form.dataset">
-                        <Form.Label>Choose a Dataset...</Form.Label>
+                        <Form.Label>
+                            <b>Choose a Dataset</b>
+                        </Form.Label>
                         <Form.Control
                             onChange={this.onDatasetChange}
                             as="select"
@@ -324,6 +336,60 @@ export class MotifStudio extends Component<
                                 Host Graph
                             </Button>
                         </Upload>
+                    </Form.Group>
+                    <hr />
+                    <Form.Group>
+                        <Form.Check
+                            type={"checkbox"}
+                            checked={this.state.allowAutomorphisms}
+                            onChange={(ev) => {
+                                this.setState({
+                                    // @ts-ignore
+                                    allowAutomorphisms: ev.target.checked,
+                                });
+                            }}
+                            label={
+                                <div>
+                                    <b>Allow automorphisms</b>
+                                    <div>
+                                        <small>
+                                            Permit automorphisms in the results
+                                            set. For more information on
+                                            automorphisms, read{" "}
+                                            <a href="https://github.com/aplbrain/dotmotif/wiki/Automorphisms">
+                                                here
+                                            </a>
+                                            . Leaving this off tends to return
+                                            the most intuitive results.
+                                        </small>
+                                    </div>
+                                </div>
+                            }
+                        />
+                        <Form.Check
+                            type={"checkbox"}
+                            checked={this.state.ignoreDirection}
+                            onChange={(ev) => {
+                                this.setState({
+                                    // @ts-ignore
+                                    ignoreDirection: ev.target.checked,
+                                });
+                            }}
+                            label={
+                                <div>
+                                    <b>Ignore direction</b>
+                                    <div>
+                                        <small>
+                                            Whether to ignore the direction of
+                                            edges and perform an undirected
+                                            search. Note that edge direction can
+                                            interact with autormophism groups in
+                                            interesting ways.
+                                        </small>
+                                    </div>
+                                </div>
+                            }
+                        />
                     </Form.Group>
                     <hr />
                     <Button
