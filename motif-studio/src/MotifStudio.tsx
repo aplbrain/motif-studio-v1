@@ -454,10 +454,7 @@ export class MotifStudio extends Component<
                                     )
                                 )}
                                 headers={resultKeys}
-                                filename={`motif-studio-results-${this.state.selectedDataset?.replace(
-                                    "file://",
-                                    ""
-                                )}.csv`}
+                                filename={`motif-studio-results-${this.state.selectedDataset?.replace("://", "-")}.csv`}
                             >
                                 Download as CSV
                             </CSVLink>

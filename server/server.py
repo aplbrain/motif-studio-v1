@@ -8,6 +8,7 @@ from flask_pymongo import PyMongo
 from gridfs import GridFS
 
 import networkx as nx
+from networkx.readwrite import node_link_data, node_link_graph
 import pandas as pd
 from dotmotif import Motif, GrandIsoExecutor
 
@@ -119,7 +120,7 @@ def motif_syntax_to_graph():
             ),
             500,
         )
-    json_g = nx.readwrite.node_link_data(nx_g)
+    json_g = node_link_data(nx_g)
 
     return jsonify({"motif": json_g, "node_constraints": motif.list_node_constraints()})
 
@@ -143,7 +144,7 @@ def execute_motif_on_host():
     )
 
     nx_g = motif.to_nx()
-    json_g = nx.readwrite.node_link_data(nx_g)
+    json_g = node_link_data(nx_g)
 
     try:
         g = nx.read_graphml(
