@@ -8,6 +8,7 @@ from flask_pymongo import PyMongo
 from gridfs import GridFS
 
 import networkx as nx
+from networkx.readwrite import node_link_data, node_link_graph
 import pandas as pd
 from dotmotif import Motif, GrandIsoExecutor
 
@@ -50,7 +51,12 @@ def provision_database():
             )
             mongo.db.hosts.insert_one(
                 {
-                    "name": graph_file.split("/")[-1].split(".")[0],
+                    "name": (
+                        graph_file.split("/")[-1]
+                        .split(".")[0]
+                        .replace("_", " ")
+                        .replace("-", " ")
+                    ),
                     "file_id": str(file_id),
                     "uri": f"file://{graph_file}",
                     "visibility": "public",
@@ -119,7 +125,7 @@ def motif_syntax_to_graph():
             ),
             500,
         )
-    json_g = nx.readwrite.node_link_data(nx_g)
+    json_g = node_link_data(nx_g)
 
     return jsonify({"motif": json_g, "node_constraints": motif.list_node_constraints()})
 
@@ -143,7 +149,7 @@ def execute_motif_on_host():
     )
 
     nx_g = motif.to_nx()
-    json_g = nx.readwrite.node_link_data(nx_g)
+    json_g = node_link_data(nx_g)
 
     try:
         g = nx.read_graphml(
@@ -179,7 +185,7 @@ def upload_host(filename):
             "inserted": datetime.datetime.utcnow(),
             "visibility": "private",
             "expire": datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
-            "uri": f"file://{str(file_id)}_{filename}",
+            "uri": f"upload://{str(file_id)}_{filename}",
         }
     ).inserted_id
     log(f"  Added {filename} to database.")
@@ -188,7 +194,7 @@ def upload_host(filename):
         {
             "status": "OK",
             "inserted": str(inserted_id),
-            "uri": f"file://{str(file_id)}_{filename}",
+            "uri": f"upload://{str(file_id)}_{filename}",
         }
     )
 
