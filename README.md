@@ -1,9 +1,13 @@
-# motif-studio
+<h1 align=center>Motif Studio</h1>
+<p align=center>Motif Studio is a browser-based tool to assist in writing and executing motif searches with the <a href="https://github.com/aplbrain/dotmotif">DotMotif</a> motif query language.</p>
 
-Motif Studio is a browser-based tool to assist in writing motifs with the [DotMotif](https://github.com/aplbrain/dotmotif) subgraph syntax.
+<img width="1239" alt="image" src="https://user-images.githubusercontent.com/693511/125712072-de1da258-949c-40e8-8da6-99e54e157947.png">
 
-<img width="1078" alt="image" src="https://user-images.githubusercontent.com/693511/120705675-1f9d5b00-c486-11eb-90f8-443853775eb7.png">
+# Demo
 
+There is a live version of Motif Studio running at http://motifstudio.bossdb.org.
+
+<!-- <img width="1078" alt="image" src="https://user-images.githubusercontent.com/693511/120705675-1f9d5b00-c486-11eb-90f8-443853775eb7.png"> -->
 <!-- ![usingmotifstudio](https://user-images.githubusercontent.com/693511/102022121-ad5b8180-3d52-11eb-85c3-45a2aa0d930c.gif) -->
 
 ## Deploying with Docker-Compose
