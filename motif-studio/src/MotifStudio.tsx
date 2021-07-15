@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import "./pane-styling.css";
 
 import SplitPane, { Pane } from "react-split-pane";
+import { MotifBuildTab } from "./MotifBuildTab";
 
 type RequestParamType = {
     [key: string]: any;
@@ -292,7 +293,7 @@ export class MotifStudio extends Component<
 
         let motifVisualizerTab = (
             <div style={{ height: "80vh", padding: "1em" }}>
-                <MotifVisualizer
+                <MotifBuildTab
                     graph={this.state.motifJSON}
                     error={this.state.motifError ? [this.state.motifError] : []}
                 />
