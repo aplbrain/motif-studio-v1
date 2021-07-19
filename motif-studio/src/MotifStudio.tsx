@@ -3,7 +3,6 @@ import _ from "lodash";
 import { Alert, Button, Card, Col, Form, Row, Table } from "react-bootstrap";
 import { ControlledEditor, monaco } from "@monaco-editor/react";
 import { Config } from "./Config";
-import MotifVisualizer from "./MotifVisualizer";
 import { CSVLink } from "react-csv";
 import Upload from "rc-upload";
 
@@ -14,6 +13,8 @@ import { toast } from "react-toastify";
 import "./pane-styling.css";
 
 import SplitPane, { Pane } from "react-split-pane";
+
+import MotifVisualizer from "./MotifVisualizer";
 import { MotifBuildTab } from "./MotifBuildTab";
 
 type RequestParamType = {
@@ -136,7 +137,6 @@ export class MotifStudio extends Component<
         let keys = window.location.search.slice(1).toString().split(/[=&]/g);
         let urlState: { [name: string]: string } = {};
         for (let i = 0; i < keys.length; i += 2) {
-            console.log(keys);
             urlState[keys[i]] = decodeURIComponent(decodeURIComponent(keys[i + 1]));
         }
 
@@ -322,11 +322,14 @@ export class MotifStudio extends Component<
                                 {" "}
                                 No dataset selected...{" "}
                             </option>
-                            {this.state.hosts.map((h) => (
-                                <option key={h.uri} value={h.uri}>
-                                    {h.name}
-                                </option>
-                            ))}
+                            {this.state.hosts
+                                // @ts-ignore
+                                .sort((a, b) => 1 * (a.name > b.name))
+                                .map((h) => (
+                                    <option key={h.uri} value={h.uri}>
+                                        {h.name.replace("_", " ")}
+                                    </option>
+                                ))}
                         </Form.Control>
                         <Upload
                             action={(file) => `${Config.api.baseURL}/hosts/upload/${file.name}`}
