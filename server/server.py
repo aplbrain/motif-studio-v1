@@ -41,12 +41,18 @@ def provision_database():
     for graph_file in glob.glob("graphs/*.graphml"):
         log(f"* Checking {graph_file}...")
         # Don't re-add the graph if it's already there
-        if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1].split(".")[0]}):
+        if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1]
+                        .split(".")[0]
+                        .replace("_", " ")
+                        .replace("-", " ")}):
             log(f"  {graph_file} already in database")
         else:
 
             file_id = mongo.save_file(
-                graph_file.split("/")[-1].split(".")[0],
+                graph_file.split("/")[-1]
+                        .split(".")[0]
+                        .replace("_", " ")
+                        .replace("-", " "),
                 open(graph_file, "rb"),
             )
             mongo.db.hosts.insert_one(
