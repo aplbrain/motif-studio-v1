@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d16" for="edge" attr.name="post_pos_z_vx" attr.type="long"/>
-<key id="d15" for="edge" attr.name="post_pos_y_vx" attr.type="long"/>
-<key id="d14" for="edge" attr.name="post_pos_x_vx" attr.type="long"/>
-<key id="d13" for="edge" attr.name="ctr_pos_z_vx" attr.type="long"/>
-<key id="d12" for="edge" attr.name="ctr_pos_y_vx" attr.type="long"/>
-<key id="d11" for="edge" attr.name="ctr_pos_x_vx" attr.type="long"/>
-<key id="d10" for="edge" attr.name="pre_pos_z_vx" attr.type="long"/>
-<key id="d9" for="edge" attr.name="pre_pos_y_vx" attr.type="long"/>
-<key id="d8" for="edge" attr.name="pre_pos_x_vx" attr.type="long"/>
-<key id="d7" for="edge" attr.name="ctr_pt_z_nm" attr.type="long"/>
-<key id="d6" for="edge" attr.name="ctr_pt_y_nm" attr.type="long"/>
-<key id="d5" for="edge" attr.name="ctr_pt_x_nm" attr.type="long"/>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d16" for="edge" attr.name="post_pos_z_vx" attr.type="int"/>
+<key id="d15" for="edge" attr.name="post_pos_y_vx" attr.type="int"/>
+<key id="d14" for="edge" attr.name="post_pos_x_vx" attr.type="int"/>
+<key id="d13" for="edge" attr.name="ctr_pos_z_vx" attr.type="int"/>
+<key id="d12" for="edge" attr.name="ctr_pos_y_vx" attr.type="int"/>
+<key id="d11" for="edge" attr.name="ctr_pos_x_vx" attr.type="int"/>
+<key id="d10" for="edge" attr.name="pre_pos_z_vx" attr.type="int"/>
+<key id="d9" for="edge" attr.name="pre_pos_y_vx" attr.type="int"/>
+<key id="d8" for="edge" attr.name="pre_pos_x_vx" attr.type="int"/>
+<key id="d7" for="edge" attr.name="ctr_pt_z_nm" attr.type="int"/>
+<key id="d6" for="edge" attr.name="ctr_pt_y_nm" attr.type="int"/>
+<key id="d5" for="edge" attr.name="ctr_pt_x_nm" attr.type="int"/>
 <key id="d4" for="edge" attr.name="spine_vol_um3" attr.type="double"/>
-<key id="d3" for="edge" attr.name="cleft_vx" attr.type="long"/>
+<key id="d3" for="edge" attr.name="cleft_vx" attr.type="int"/>
 <key id="d2" for="edge" attr.name="post_root_id" attr.type="string"/>
 <key id="d1" for="edge" attr.name="pre_root_id" attr.type="string"/>
-<key id="d0" for="edge" attr.name="id" attr.type="long"/>
+<key id="d0" for="edge" attr.name="id" attr.type="int"/>
 <graph edgedefault="directed"><node id="648518346349539437"/>
 <node id="648518346349531254"/>
 <node id="648518346349537978"/>
