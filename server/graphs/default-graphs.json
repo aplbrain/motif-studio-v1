@@ -1,0 +1,16 @@
+{
+    "default_graphs": [
+        {
+            "name": "Kasthuri 2015 v4",
+            "location": {
+                "type": "file",
+                "path": "Kasthuri2015_v4.graphml"
+            },
+            "website": "https://bossdb.org/project/kasthuri2015",
+            "visualization": {
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron",
+                "image_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/em"
+            }
+        }
+    ]
+}
