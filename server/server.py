@@ -1,5 +1,4 @@
 import datetime
-import glob
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from bson.objectid import ObjectId
@@ -8,12 +7,15 @@ from flask_pymongo import PyMongo
 from gridfs import GridFS
 
 import networkx as nx
-from networkx.readwrite import node_link_data, node_link_graph
+from networkx.readwrite import node_link_data
 import pandas as pd
 from dotmotif import Motif, GrandIsoExecutor
 
+from hosts import get_hosts_from_manifest_file
+
 __version__ = "0.1.0"
 MONGO_URI = "mongodb://mongodb:27017/motifstudio"
+MANIFEST_FILE = "./graphs/default-graphs.json"
 
 
 def cursor_to_dictlist(cursor):
@@ -24,6 +26,11 @@ def cursor_to_dictlist(cursor):
 
 def log(*args, **kwargs):
     print(*args, **kwargs, flush=True)
+
+
+log("Loading hosts...")
+hosts = get_hosts_from_manifest_file(MANIFEST_FILE)
+log(f"{len(hosts)} hosts loaded from {MANIFEST_FILE}.")
 
 
 log("Connecting to database...")
@@ -37,43 +44,30 @@ mongo.db.hosts.ensure_index("expire", expireAfterSeconds=0)
 
 def provision_database():
     log("Loading hosts...")
+    for host in hosts:
+        log(f"* Checking {host.get_uri()}...")
 
-    for graph_file in glob.glob("graphs/*.graphml"):
-        log(f"* Checking {graph_file}...")
         # Don't re-add the graph if it's already there
-        if mongo.db.hosts.find_one({"name": graph_file.split("/")[-1]
-                        .split(".")[0]
-                        .replace("_", " ")
-                        .replace("-", " ")}):
-            log(f"  {graph_file} already in database")
+        if mongo.db.hosts.find_one({"name": host.get_name()}):
+            log(f"  {host.get_name()} already in database")
         else:
+            with open(host.get_metadata()["location"]["path"], "rb") as gfile:
+                file_id = mongo.save_file(host.get_uri(), gfile)
+                mongo.db.hosts.insert_one(
+                    {
+                        "name": host.get_name(),
+                        "uri": host.get_uri(),
+                        "visibility": "public",
+                        "inserted": datetime.datetime.utcnow(),
+                        "expire": datetime.datetime.utcnow()
+                        + datetime.timedelta(days=9999),
+                        "file_id": str(file_id),
+                        "metadata": host.get_metadata(),
+                    }
+                )
+                log(f"  Added {host.get_name()} to database.")
 
-            file_id = mongo.save_file(
-                graph_file.split("/")[-1]
-                        .split(".")[0]
-                        .replace("_", " ")
-                        .replace("-", " "),
-                open(graph_file, "rb"),
-            )
-            mongo.db.hosts.insert_one(
-                {
-                    "name": (
-                        graph_file.split("/")[-1]
-                        .split(".")[0]
-                        .replace("_", " ")
-                        .replace("-", " ")
-                    ),
-                    "file_id": str(file_id),
-                    "uri": f"file://{graph_file}",
-                    "visibility": "public",
-                    "inserted": datetime.datetime.utcnow(),
-                    "expire": datetime.datetime.utcnow()
-                    + datetime.timedelta(days=9999),
-                }
-            )
-            log(f"  Added {graph_file} to database.")
-
-    log(f"Loaded with {mongo.db.hosts.count()} host graphs.")
+    log(f"Loaded with {mongo.db.hosts.count()} host graphs in database.")
 
 
 provision_database()
@@ -158,9 +152,10 @@ def execute_motif_on_host():
     json_g = node_link_data(nx_g)
 
     try:
+        host_info = mongo.db.hosts.find_one({"uri": payload["hostID"]})
         g = nx.read_graphml(
             GridFS(mongo.db).get(
-                ObjectId(mongo.db.hosts.find_one({"uri": payload["hostID"]})["file_id"])
+                ObjectId(host_info["file_id"])
             )
         )
         host = GrandIsoExecutor(graph=g)
@@ -174,7 +169,7 @@ def execute_motif_on_host():
 
     results = pd.DataFrame(host.find(motif))
 
-    return jsonify({"motif": json_g, "results": results.to_dict()})
+    return jsonify({"motif": json_g, "results": results.to_dict(), "metadata": host_info['metadata']})
 
 
 @APP.route("/hosts/upload/<path:filename>", methods=["POST"])

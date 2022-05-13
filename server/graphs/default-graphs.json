@@ -1,0 +1,56 @@
+{
+    "graphs": [
+        {
+            "name": "Kasthuri 2015 v4",
+            "location": {
+                "type": "file",
+                "path": "graphs/Kasthuri2015_v4.graphml"
+            },
+            "website": "https://bossdb.org/project/kasthuri2015",
+            "visualization": {
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron",
+                "image_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/em"
+            }
+        },
+        {
+            "name": "MICrONS Pinky100 v185",
+            "location": {
+                "type": "file",
+                "path": "graphs/MICrONS-Pinky100_v185.graphml"
+            },
+            "website": "https://bossdb.org/project/microns-pinky"
+        },
+        {
+            "name": "Bock 2011 Mouse visual cortex",
+            "location": {
+                "type": "file",
+                "path": "graphs/Bock2011_Mouse-visual-cortex-2.graphml"
+            },
+            "website": "https://bossdb.org/project/bock2011"
+        },
+        {
+            "name": "Cook 2019 Hermaphrodie (Chemical)",
+            "location": {
+                "type": "file",
+                "path": "graphs/Cook2019_Herm-Chemical.graphml"
+            },
+            "website": "https://bossdb.org/"
+        },
+        {
+            "name": "Kakaria-deBivort Ring-Attractor (Attributed Model)",
+            "location": {
+                "type": "file",
+                "path": "graphs/Kakaria-deBivort_Attributed-Ring-Attractor.graphml"
+            },
+            "website": "https://bossdb.org/tools/DotMotif"
+        },
+        {
+            "name": "Takemura2013_Drosophila-medulla.graphml",
+            "location": {
+                "type": "file",
+                "path": "graphs/Takemura2013_Drosophila-medulla.graphml"
+            },
+            "website": "https://bossdb.org/project/Takemura2013"
+        }
+    ]
+}
