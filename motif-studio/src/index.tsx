@@ -4,6 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// @ts-ignore
+window.__motif_studio_information__ = {
+    "version": "v0.1.1.rc1"
+}
+
 ReactDOM.render(
     <React.StrictMode>
         <App />

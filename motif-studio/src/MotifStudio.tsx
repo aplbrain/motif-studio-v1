@@ -480,14 +480,28 @@ export class MotifStudio extends Component<
                                 {_.zip(...resultKeys.map((k) => Object.values(this.state.results[k])))
                                     .slice(0, 100)
                                     .map((row, i) => {
-                                        let seglist = row.map((i: any) => i.slice(1)).join(",");
-                                        let link = metadata.visualization ? `https://neuroglancer.bossdb.io/#!{ "layers": [ { "type": "image", "source": "${metadata.visualization.image_channel}", "tab": "source", "name": "image" }, { "type": "segmentation", "source":  "${metadata.visualization.vertex_segmentation_channel}", "tab": "source", "name": "segmentation", "segments": [${seglist}] } ] }` : (metadata.website || "#");
+                                        let seglist = row.map((i: any) => {
+                                            if (i[0] == 'n') {
+                                                return i.slice(1)
+                                            } else {
+                                                return i
+                                            }
+                                        }).join(",");
+                                        let link = metadata.visualization
+                                            ? `https://neuroglancer.bossdb.io/#!{ "layers": [` +
+                                            `{ "type": "image", "source": "${metadata.visualization.image_channel}", "tab": "source", "name": "image" }, ` +
+                                            `{ "type": "segmentation", "source":  "${metadata.visualization.vertex_segmentation_channel}", "tab": "source", "name": "segmentation", "segments": [${seglist}] } ` +
+                                            (metadata.visualization.mesh_channel
+                                                ? `, { "type": "segmentation", "source": "${metadata.visualization.mesh_channel}", "tab": "source", "name": "mesh", "linkedSegmentationGroup": "segmentation", "segments": [${seglist}]  }`
+                                                : "") +
+                                            `] }`
+                                            : metadata.website || "#";
 
                                         return (<tr key={i}>
                                             <td><a
                                                 href={link}
                                                 target="_blank" rel="noopener noreferrer"
-                                            >{i}</a></td>
+                                            >{metadata.visualization?"Visualize: " : null }{i}</a></td>
                                             {row.map((m) => (
                                                 <td
                                                     // @ts-ignore
