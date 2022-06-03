@@ -133,7 +133,7 @@ function App() {
         <>
             {saveModal}
             {openModal}
-            <Navbar bg="primary" variant="dark">
+            <Navbar bg="dark" variant="dark">
                 <Nav className="mr-auto ">
                     <div className="d-flex">
                         <Dropdown>

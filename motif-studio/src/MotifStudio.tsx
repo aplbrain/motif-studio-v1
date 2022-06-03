@@ -368,7 +368,7 @@ export class MotifStudio extends Component<
                             }}
                         >
                             <Button block style={{ marginTop: "0.5em" }} variant={"secondary"}>
-                                <FaCloudUploadAlt size="1.5em" /> Upload Custom Host Graph
+                                <FaCloudUploadAlt size="1.5em" /> Upload Custom Host Graph (.graphml)
                             </Button>
                         </Upload>
                     </Form.Group>
@@ -387,7 +387,7 @@ export class MotifStudio extends Component<
                                 <div>
                                     <b>Allow automorphisms</b>
                                     <div>
-                                        <small>
+                                        <small className="d-none d-lg-block">
                                             Permit automorphisms in the results set. For more information on
                                             automorphisms, read{" "}
                                             <a href="https://github.com/aplbrain/dotmotif/wiki/Automorphisms">here</a>.
@@ -410,7 +410,7 @@ export class MotifStudio extends Component<
                                 <div>
                                     <b>Ignore direction</b>
                                     <div>
-                                        <small>
+                                        <small className="d-none d-lg-block">
                                             Whether to ignore the direction of edges and perform an undirected search.
                                             Note that edge direction can interact with autormophism groups in
                                             interesting ways.
@@ -480,38 +480,44 @@ export class MotifStudio extends Component<
                                 {_.zip(...resultKeys.map((k) => Object.values(this.state.results[k])))
                                     .slice(0, 100)
                                     .map((row, i) => {
-                                        let seglist = row.map((i: any) => {
-                                            if (i[0] == 'n') {
-                                                return i.slice(1)
-                                            } else {
-                                                return i
-                                            }
-                                        }).join(",");
+                                        let seglist = row
+                                            .map((i: any) => {
+                                                if (i[0] === "n") {
+                                                    return i.slice(1);
+                                                } else {
+                                                    return i;
+                                                }
+                                            })
+                                            .join(",");
                                         let link = metadata.visualization
                                             ? `https://neuroglancer.bossdb.io/#!{ "layers": [` +
-                                            `{ "type": "image", "source": "${metadata.visualization.image_channel}", "tab": "source", "name": "image" }, ` +
-                                            `{ "type": "segmentation", "source":  "${metadata.visualization.vertex_segmentation_channel}", "tab": "source", "name": "segmentation", "segments": [${seglist}] } ` +
-                                            (metadata.visualization.mesh_channel
-                                                ? `, { "type": "segmentation", "source": "${metadata.visualization.mesh_channel}", "tab": "source", "name": "mesh", "linkedSegmentationGroup": "segmentation", "segments": [${seglist}]  }`
-                                                : "") +
-                                            `] }`
+                                              `{ "type": "image", "source": "${metadata.visualization.image_channel}", "tab": "source", "name": "image" }, ` +
+                                              `{ "type": "segmentation", "source":  "${metadata.visualization.vertex_segmentation_channel}", "tab": "source", "name": "segmentation", "segments": [${seglist}] } ` +
+                                              (metadata.visualization.mesh_channel
+                                                  ? `, { "type": "segmentation", "source": "${metadata.visualization.mesh_channel}", "tab": "source", "name": "mesh", "linkedSegmentationGroup": "segmentation", "segments": [${seglist}]  }`
+                                                  : "") +
+                                              `] }`
                                             : metadata.website || "#";
 
-                                        return (<tr key={i}>
-                                            <td><a
-                                                href={link}
-                                                target="_blank" rel="noopener noreferrer"
-                                            >{metadata.visualization?"Visualize: " : null }{i}</a></td>
-                                            {row.map((m) => (
-                                                <td
-                                                    // @ts-ignore
-                                                    key={m}
-                                                >
-                                                    {/*@ts-ignore*/}
-                                                    {m}
+                                        return (
+                                            <tr key={i}>
+                                                <td>
+                                                    <a href={link} target="_blank" rel="noopener noreferrer">
+                                                        {metadata.visualization ? "Visualize: " : null}
+                                                        {i}
+                                                    </a>
                                                 </td>
-                                            ))}
-                                        </tr>)
+                                                {row.map((m) => (
+                                                    <td
+                                                        // @ts-ignore
+                                                        key={m}
+                                                    >
+                                                        {/*@ts-ignore*/}
+                                                        {m}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        );
                                     })}
                             </tbody>
                         </Table>
@@ -523,14 +529,14 @@ export class MotifStudio extends Component<
         let motifRunTab = (
             <div style={{ height: "80vh", padding: "1em" }}>
                 <Row style={{ minHeight: "40vh" }}>
-                    <Col>{executionForm}</Col>
-                    <Col>
+                    <Col className="d-none d-lg-block">
                         <Card style={{ margin: "1em", minHeight: "40vh" }}>
                             <Card.Body>
                                 <MotifVisualizer graph={this.state.motifJSON} />
                             </Card.Body>
                         </Card>
                     </Col>
+                    <Col>{executionForm}</Col>
                 </Row>
                 <Row>
                     <Col
@@ -546,19 +552,21 @@ export class MotifStudio extends Component<
         );
 
         return (
-            <SplitPane split="vertical" minSize={100} defaultSize={"25%"}>
-                <Pane>
-                    <ControlledEditor
-                        height="80vh"
-                        language="motiflang"
-                        theme="motiftheme"
-                        value={defaultValue}
-                        options={{ fontSize: 14 }}
-                        onChange={this.handleInputChanged}
-                    />
-                </Pane>
-                <Pane>{this.props.requestedView === "Build" ? motifVisualizerTab : motifRunTab}</Pane>
-            </SplitPane>
+            <>
+                <SplitPane split="vertical" minSize={100} defaultSize={"45%"}>
+                    <Pane>
+                        <ControlledEditor
+                            height="80vh"
+                            language="motiflang"
+                            theme="motiftheme"
+                            value={defaultValue}
+                            options={{ fontSize: 14 }}
+                            onChange={this.handleInputChanged}
+                        />
+                    </Pane>
+                    <Pane>{this.props.requestedView === "Build" ? motifVisualizerTab : motifRunTab}</Pane>
+                </SplitPane>
+            </>
         );
     }
 }

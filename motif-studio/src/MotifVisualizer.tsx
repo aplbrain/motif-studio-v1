@@ -5,7 +5,7 @@ import ColorHash from "color-hash";
 function getColorForNode(node: any) {
     let { id, ...obj } = node;
     return new ColorHash({
-        lightness: 0.7,
+        lightness: 0.8,
         hash: function (str: string) {
             str = str || "";
             var hash = 0;
@@ -15,7 +15,6 @@ function getColorForNode(node: any) {
             return hash;
         },
     }).hex(JSON.stringify(obj.constraints));
-    // return "#B8CDF8";
 }
 
 const MotifVisualizer = React.memo((props: { graph: any; nodeConstraints?: Array<any>; error?: string[] }) => {
@@ -27,7 +26,7 @@ const MotifVisualizer = React.memo((props: { graph: any; nodeConstraints?: Array
         return {
             id: node.id,
             label: node.id,
-            shape: "ellipse",
+            shape: "box",
             shapeProperties: { borderRadius: 1 },
             font: {
                 face: "Arial",
@@ -79,7 +78,11 @@ const MotifVisualizer = React.memo((props: { graph: any; nodeConstraints?: Array
         nodes,
         edges,
         physics,
-        options: { autoResize: true, width: "100%", height: "500px" },
+        options: {
+            autoResize: true,
+            width: "100%",
+            height: "400px",
+        },
     };
     return (
         <div style={{ height: "99%" }}>
