@@ -9,7 +9,8 @@
             "website": "https://bossdb.org/project/kasthuri2015",
             "visualization": {
                 "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron",
-                "image_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/em"
+                "image_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/em",
+		"mesh_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron"
             }
         },
         {

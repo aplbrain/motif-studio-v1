@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 
 // @ts-ignore
 window.__motif_studio_information__ = {
-    "version": "v0.1.1.rc1"
+    "version": "v0.1.1.rc2"
 }
 
 ReactDOM.render(
