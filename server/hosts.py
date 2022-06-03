@@ -183,7 +183,7 @@ def get_hosts_from_manifest_file(
         manifest = json.load(f)
 
     graphs = []
-    for g in manifest:
+    for g in manifest['graphs']:
         assert (
             "name" in g
         ), f"Hosts loaded from a manifest file must have `name`, but got {g}"

@@ -48,6 +48,7 @@ export class MotifStudio extends Component<
         rightPaneTab: string;
         loading: boolean;
         results?: any;
+        metadata?: any;
         executionDuration: number;
         hosts: Array<any>;
         selectedDataset?: string;
@@ -65,6 +66,7 @@ export class MotifStudio extends Component<
             motifError: undefined,
             rightPaneTab: props.requestedView || "Run",
             results: undefined,
+            metadata: undefined,
             executionDuration: 0,
             loading: false,
             hosts: [],
@@ -222,6 +224,7 @@ export class MotifStudio extends Component<
                 this.setState({
                     motifJSON: motifParseResponse.motif,
                     results: motifParseResponse.results,
+                    metadata: motifParseResponse.metadata,
                     // @ts-ignore
                     executionDuration: new Date() * 1 - start,
                     loading: false,
@@ -433,6 +436,7 @@ export class MotifStudio extends Component<
         );
 
         let resultKeys = this.state.results ? Object.keys(this.state.results) : [];
+        let metadata = this.state.metadata || {};
 
         let resourceReadoutTable = (
             <div>
@@ -475,9 +479,15 @@ export class MotifStudio extends Component<
                             <tbody>
                                 {_.zip(...resultKeys.map((k) => Object.values(this.state.results[k])))
                                     .slice(0, 100)
-                                    .map((row, i) => (
-                                        <tr key={i}>
-                                            <td>{i}</td>
+                                    .map((row, i) => {
+                                        let seglist = row.map((i: any) => i.slice(1)).join(",");
+                                        let link = metadata.visualization ? `https://neuroglancer.bossdb.io/#!{ "layers": [ { "type": "image", "source": "${metadata.visualization.image_channel}", "tab": "source", "name": "image" }, { "type": "segmentation", "source":  "${metadata.visualization.vertex_segmentation_channel}", "tab": "source", "name": "segmentation", "segments": [${seglist}] } ] }` : (metadata.website || "#");
+
+                                        return (<tr key={i}>
+                                            <td><a
+                                                href={link}
+                                                target="_blank" rel="noopener noreferrer"
+                                            >{i}</a></td>
                                             {row.map((m) => (
                                                 <td
                                                     // @ts-ignore
@@ -487,8 +497,8 @@ export class MotifStudio extends Component<
                                                     {m}
                                                 </td>
                                             ))}
-                                        </tr>
-                                    ))}
+                                        </tr>)
+                                    })}
                             </tbody>
                         </Table>
                     </div>

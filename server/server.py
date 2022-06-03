@@ -11,7 +11,7 @@ from networkx.readwrite import node_link_data
 import pandas as pd
 from dotmotif import Motif, GrandIsoExecutor
 
-from .hosts import get_hosts_from_manifest_file
+from hosts import get_hosts_from_manifest_file
 
 __version__ = "0.1.0"
 MONGO_URI = "mongodb://mongodb:27017/motifstudio"
@@ -51,20 +51,21 @@ def provision_database():
         if mongo.db.hosts.find_one({"name": host.get_name()}):
             log(f"  {host.get_name()} already in database")
         else:
-            mongo.save_file(host.get_uri(), host.get_metadata()["location"]["path"])
-            mongo.db.hosts.insert_one(
-                {
-                    "name": host.get_name(),
-                    "uri": host.get_uri(),
-                    "visibility": "public",
-                    "inserted": datetime.datetime.utcnow(),
-                    "expire": datetime.datetime.utcnow()
-                    + datetime.timedelta(days=9999),
-                    "file_id": host.get_uri(),
-                    "metadata": host.get_metadata(),
-                }
-            )
-            log(f"  Added {host.get_name()} to database.")
+            with open(host.get_metadata()["location"]["path"], "rb") as gfile:
+                file_id = mongo.save_file(host.get_uri(), gfile)
+                mongo.db.hosts.insert_one(
+                    {
+                        "name": host.get_name(),
+                        "uri": host.get_uri(),
+                        "visibility": "public",
+                        "inserted": datetime.datetime.utcnow(),
+                        "expire": datetime.datetime.utcnow()
+                        + datetime.timedelta(days=9999),
+                        "file_id": str(file_id),
+                        "metadata": host.get_metadata(),
+                    }
+                )
+                log(f"  Added {host.get_name()} to database.")
 
     log(f"Loaded with {mongo.db.hosts.count()} host graphs in database.")
 
@@ -151,9 +152,10 @@ def execute_motif_on_host():
     json_g = node_link_data(nx_g)
 
     try:
+        host_info = mongo.db.hosts.find_one({"uri": payload["hostID"]})
         g = nx.read_graphml(
             GridFS(mongo.db).get(
-                ObjectId(mongo.db.hosts.find_one({"uri": payload["hostID"]})["file_id"])
+                ObjectId(host_info["file_id"])
             )
         )
         host = GrandIsoExecutor(graph=g)
@@ -167,7 +169,7 @@ def execute_motif_on_host():
 
     results = pd.DataFrame(host.find(motif))
 
-    return jsonify({"motif": json_g, "results": results.to_dict()})
+    return jsonify({"motif": json_g, "results": results.to_dict(), "metadata": host_info['metadata']})
 
 
 @APP.route("/hosts/upload/<path:filename>", methods=["POST"])
