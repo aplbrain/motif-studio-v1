@@ -18,7 +18,12 @@
                 "type": "file",
                 "path": "graphs/MICrONS-Pinky100_v185.graphml"
             },
-            "website": "https://bossdb.org/project/microns-pinky"
+            "website": "https://bossdb.org/project/microns-pinky",
+            "visualization": {
+                "vertex_segmentation_channel": "boss://https://api.bossdb.io/microns/pinky100_8x8x40/segmentation",
+                "image_channel": "boss://https://api.bossdb.io/microns/pinky100/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/pinky100_v185/seg"
+            }
         },
         {
             "name": "Bock 2011 Mouse visual cortex",
