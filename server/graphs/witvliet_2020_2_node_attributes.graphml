@@ -1,0 +1,5929 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="synapses" attr.type="int" for="edge" id="d7" />
+  <key attr.name="type" attr.type="string" for="edge" id="d6" />
+  <key attr.name="typ" attr.type="string" for="node" id="d5" />
+  <key attr.name="classes" attr.type="string" for="node" id="d4" />
+  <key attr.name="intail" attr.type="int" for="node" id="d3" />
+  <key attr.name="nt" attr.type="string" for="node" id="d2" />
+  <key attr.name="emb" attr.type="int" for="node" id="d1" />
+  <key attr.name="inhead" attr.type="int" for="node" id="d0" />
+  <graph edgedefault="directed">
+    <node id="ADAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ADA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AIBR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AIB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ASHL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASH</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">AVA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVBL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AVB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVBR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AVB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">AVD</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">AVD</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVJR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">1</data>
+      <data key="d4">AVJ</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="PVPL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">PVP</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RICR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">o</data>
+      <data key="d3">0</data>
+      <data key="d4">RIC</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RID">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">RID</data>
+      <data key="d5">n</data>
+    </node>
+    <node id="RIML">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">lt</data>
+      <data key="d3">0</data>
+      <data key="d4">RIM</data>
+      <data key="d5">imn</data>
+    </node>
+    <node id="SMDDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMD</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="ADAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ADA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ADFR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">as</data>
+      <data key="d3">0</data>
+      <data key="d4">ADF</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="ALMR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ALM</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="ASHR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASH</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="ASKR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASK</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">AVA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AVER">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AVE</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="RICL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">o</data>
+      <data key="d3">0</data>
+      <data key="d4">RIC</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RIMR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">lt</data>
+      <data key="d3">0</data>
+      <data key="d4">RIM</data>
+      <data key="d5">imn</data>
+    </node>
+    <node id="ADEL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">ADE</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="ADER">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">ADE</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="FLPL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">FLP</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="ADFL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">as</data>
+      <data key="d3">0</data>
+      <data key="d4">ADF</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="AIAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AIYL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIY</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AIZL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AIZ</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AUAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AUA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVHR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">1</data>
+      <data key="d4">AVH</data>
+      <data key="d5">n</data>
+    </node>
+    <node id="RIAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">RIA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="RIH">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">as</data>
+      <data key="d3">0</data>
+      <data key="d4">RIH</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RIR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RIR</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="SIBDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SIBVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SMBDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SMBVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="AIAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AIZR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AIZ</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AUAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AUA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVHL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">1</data>
+      <data key="d4">AVH</data>
+      <data key="d5">n</data>
+    </node>
+    <node id="DVA">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">DVA</data>
+      <data key="d5">sin</data>
+    </node>
+    <node id="RIAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">RIA</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ADLL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ADL</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="ADLR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ADL</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AIBL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AIB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ASKL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASK</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVJL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">1</data>
+      <data key="d4">AVJ</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="OLLL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLL</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RMGL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">RMG</data>
+      <data key="d5">mn</data>
+    </node>
+    <node id="AWCR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AWC</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="OLLR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLL</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RMGR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">RMG</data>
+      <data key="d5">mn</data>
+    </node>
+    <node id="SMBVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="AFDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AFD</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AFDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AFD</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AIYR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIY</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AINR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIN</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ASJL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">ASJ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AWBL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AWB</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AWBR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AWB</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AWCL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">AWC</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="PVQL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">1</data>
+      <data key="d4">PVQ</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RIFL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RIF</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="AINL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AIN</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="ASIR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">ASI</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="ASJR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">ASJ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RIFR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RIF</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="RIBR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">ag</data>
+      <data key="d3">0</data>
+      <data key="d4">RIB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="SMDDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMD</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="SMDVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMD</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="AVEL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">AVE</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="RIBL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">ag</data>
+      <data key="d3">0</data>
+      <data key="d4">RIB</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="SMDVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMD</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="AIML">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">ls</data>
+      <data key="d3">0</data>
+      <data key="d4">AIM</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="ASGL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASG</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AIMR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">ls</data>
+      <data key="d3">0</data>
+      <data key="d4">AIM</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="ASGR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASG</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="BAGL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">BAG</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="CEPshVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">CEPsh</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="ASER">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASE</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="CEPshDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">CEPsh</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="AWAL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">AWA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RIVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RIV</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SIBDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="ASEL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ASE</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="SMBDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SMB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="ALA">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">ALA</data>
+      <data key="d5">sin</data>
+    </node>
+    <node id="CEPshDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">CEPsh</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="CEPshVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">CEPsh</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="ALML">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">ALM</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="BDUL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">BDU</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="CEPDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">CEP</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="PVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">1</data>
+      <data key="d4">PVR</data>
+      <data key="d5">si</data>
+    </node>
+    <node id="BDUR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">BDU</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="CEPDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">CEP</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="AWAR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">AWA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="PVQR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">1</data>
+      <data key="d4">PVQ</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="ASIL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">ASI</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="OLQDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLQ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="URYDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">URY</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="URYVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">URY</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="OLQDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLQ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="OLQVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLQ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="URYVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">URY</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="PVPR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">PVP</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RIGL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">RIG</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="PVCR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">PVC</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="RIS">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">0</data>
+      <data key="d4">RIS</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="AVKL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">AVK</data>
+      <data key="d5">n</data>
+    </node>
+    <node id="AVKR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">AVK</data>
+      <data key="d5">n</data>
+    </node>
+    <node id="RMDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SAADR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SAA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="SAAVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SAA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="PVT">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">1</data>
+      <data key="d4">PVT</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RIVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RIV</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="RMDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SAADL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SAA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="SAAVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SAA</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="AVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">1</data>
+      <data key="d4">AVL</data>
+      <data key="d5">imn</data>
+    </node>
+    <node id="RMER">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">0</data>
+      <data key="d4">RME</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="IL1R">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="IL2R">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RIGR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">RIG</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="BAGR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">BAG</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="PVCL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">1</data>
+      <data key="d4">PVC</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="SIBVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIB</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="IL1DL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="URADL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URA</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="URBL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URB</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="URYDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">URY</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RMDVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="URADR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URA</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="URBR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URB</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="CEPVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">CEP</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="RMDDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="CEPVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">d</data>
+      <data key="d3">0</data>
+      <data key="d4">CEP</data>
+      <data key="d5">sn</data>
+    </node>
+    <node id="OLQVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">OLQ</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RMDDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SIADL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIA</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SIADR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIA</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="DVC">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">1</data>
+      <data key="d4">DVC</data>
+      <data key="d5">i</data>
+    </node>
+    <node id="URXR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URX</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="FLPR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">FLP</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="GLRL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="RMEL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">0</data>
+      <data key="d4">RME</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="GLRR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="BWM-DL01">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM01</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DL02">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM02</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="RIPL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">RIP</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="RMDVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">RMD</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="IL1DR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="BWM-DR01">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM01</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DR02">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM02</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="GLRDR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="RIPR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">u</data>
+      <data key="d3">0</data>
+      <data key="d4">RIP</data>
+      <data key="d5">in</data>
+    </node>
+    <node id="IL1L">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="BWM-VL02">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM02</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-VR02">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM02</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="URAVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URA</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="IL1VL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="BWM-VL01">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM01</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="IL1VR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">l</data>
+      <data key="d3">0</data>
+      <data key="d4">IL1</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="BWM-VR01">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM01</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="IL2DL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="RMED">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">0</data>
+      <data key="d4">RME</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="RMEV">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">g</data>
+      <data key="d3">0</data>
+      <data key="d4">RME</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="IL2DR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="IL2L">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="IL2VL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="URAVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URA</data>
+      <data key="d5">sm</data>
+    </node>
+    <node id="IL2VR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">IL2</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="GLRVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="SIAVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIA</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="SIAVR">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">SIA</data>
+      <data key="d5">m</data>
+    </node>
+    <node id="URXL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">a</data>
+      <data key="d3">0</data>
+      <data key="d4">URX</data>
+      <data key="d5">s</data>
+    </node>
+    <node id="GLRVL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="excgl">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">exc</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="BWM-VR04">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM04</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-VL04">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM04</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DR03">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM03</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DR04">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM04</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DL03">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM03</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DL04">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM04</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DL06">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM06</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-VR03">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM03</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-VL03">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM03</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DL05">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM05</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="BWM-DR08">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM08</data>
+      <data key="d5">b</data>
+    </node>
+    <node id="GLRDL">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">GLR</data>
+      <data key="d5">u</data>
+    </node>
+    <node id="BWM-DR06">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">n</data>
+      <data key="d3">0</data>
+      <data key="d4">BWM06</data>
+      <data key="d5">b</data>
+    </node>
+    <edge source="ADAL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="ASHL">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADAL" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADAL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADAL" target="AVDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="AVDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="PVPL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="RID">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADAL" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIBR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBR" target="PVPL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBR" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AIBR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBR" target="RIML">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIBR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASHL" target="ADFL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ASHL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ASHL" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="ASHR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="ASKL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="AVBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="AVJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHL" target="RIFL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVBR" target="RIBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVDL" target="AVDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJR" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJR" target="RIFL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJR" target="RIS">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVPL" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="AVHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="RID">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="URXL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPL" target="URYVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RICR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RICR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RICR" target="SIBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICR" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIML" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="AVEL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="BWM-VR04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="PVCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="RIS">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIML" target="SAAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="SAAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIML" target="SIADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="SIADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="SIBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIML" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIML" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIML" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDDL" target="BWM-DL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDL" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDL" target="BWM-DR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDDL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMDDL" target="SMDDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDL" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ADAR" target="ADAL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="ADFR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="ALMR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="ASHR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="ASKR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADAR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ADAR" target="AVDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="AVER">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADAR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADFR" target="ADFL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFR" target="AIAR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ADFR" target="AUAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADFR" target="AVHL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFR" target="DVA">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ADFR" target="RIH">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFR" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALMR" target="AIMR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALMR" target="BDUR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALMR" target="CEPDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ALMR" target="PVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALMR" target="RIFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASHR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASHR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASHR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="AVDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="AWAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="PVQR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASHR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASHR" target="SMBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASKR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ASKR" target="AWAR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASKR" target="PVQR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASKR" target="RIFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVAL" target="AVAR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVAL" target="RIMR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVER" target="OLQDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVER" target="OLQVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVER" target="RIMR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVER" target="RIVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVER" target="URYVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICL" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RICL" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RICL" target="excgl">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICL" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RICL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RICL" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RICL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIMR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="BWM-VL04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIMR" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIMR" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="SAADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="SAAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="SAAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIMR" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIMR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIMR" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ADEL" target="ADAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADEL" target="ADER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADEL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADEL" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADER" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADER" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADER" target="FLPL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="ADEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="ADER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="FLPL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="FLPR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPL" target="PVCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="AIAL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ADFL" target="ASHL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="AVHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ADFL" target="RIH">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ADFL" target="SIBDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="SIBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="SMBDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADFL" target="SMBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="ADAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">6</data>
+    </edge>
+    <edge source="AIAL" target="AINR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="ASJL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="ASKL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIAL" target="AWBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="AWBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="PVQL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAL" target="RIFL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIYL" target="ADFL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIYL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYL" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="AIYL" target="AWAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYL" target="AWBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AIYL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIYL" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIZL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="AIZL" target="ASEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="AWBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIZL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="AIZL" target="SIBDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZL" target="SMBDL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIZL" target="SMBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AUAL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AUAL" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AUAL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AUAL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AVHR" target="ADAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="ADFL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVHR" target="ASHL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="AWBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHR" target="SMBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAL" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIAL" target="RIVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">9</data>
+    </edge>
+    <edge source="RIAL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIAL" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIAL" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">8</data>
+    </edge>
+    <edge source="RIAL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">9</data>
+    </edge>
+    <edge source="RIAL" target="SIADL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIAL" target="SIAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAL" target="SIAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAL" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIAL" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIAL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIH" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIH" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="CEPDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="CEPshVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIH" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="CEPVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="GLRR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="GLRVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="GLRVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="IL2VL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="IL2VR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="OLQDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="OLQDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIH" target="OLQVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIH" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIH" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIH" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIH" target="RIR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="RIS">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIH" target="URYVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIR" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="BAGL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="BAGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="DVA">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIR" target="URXL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIR" target="URXR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DL05">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DR04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="BWM-DR08">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="GLRDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDL" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDL" target="SAAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDL" target="SMBDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVL" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVL" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVL" target="BWM-VL03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVL" target="BWM-VL04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVL" target="GLRL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVL" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVL" target="SAADL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMBVL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="ADFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIAR" target="AINL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="ASHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="ASIR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="ASJR">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIAR" target="ASKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="AWBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIAR" target="RIFR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIZR" target="AFDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZR" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIZR" target="AIZL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZR" target="ASHR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIZR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIZR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AIZR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIZR" target="SMBDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIZR" target="SMBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AUAR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AUAR" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AUAR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AUAR" target="RIBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AUAR" target="RIR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHL" target="ADFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHL" target="ADLR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHL" target="ASER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVHL" target="AWBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVHL" target="PVPR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVA" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVA" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVA" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVA" target="AUAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVA" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVA" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="DVA" target="OLQVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVA" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVA" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="DVA" target="SIADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVA" target="SIADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="CEPDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="CEPVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="GLRVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="RIAR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIAR" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="RIAR" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="RIAR" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="RIAR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">9</data>
+    </edge>
+    <edge source="RIAR" target="SIADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="SIADR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIAR" target="SIAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAR" target="SMBDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIAR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAR" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIAR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIAR" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ADLL" target="ADLR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="ASKL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="AVJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="OLLL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLL" target="RMGL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ADLR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="ASKR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ADLR" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="OLLR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="RMGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ADLR" target="SMBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIBL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIBL" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AIBL" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="AIBL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIBL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASKL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">7</data>
+    </edge>
+    <edge source="ASKL" target="ASJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="ASHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="AVHL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="PVCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="RIFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVJL" target="SMBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">11</data>
+    </edge>
+    <edge source="OLLL" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLLL" target="CEPVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="OLLL" target="OLLR">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLLL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="OLLL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="OLLL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMGL" target="IL2L">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMGL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMGL" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMGL" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMGL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMGL" target="SIBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCR" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AWCR" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AWCR" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AWCR" target="AIYR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWCR" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCR" target="ASER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCR" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="OLLR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">9</data>
+    </edge>
+    <edge source="OLLR" target="CEPDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLR" target="CEPVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="OLLR" target="RIGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLLR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="OLLR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="OLLR" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMGR" target="IL2R">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMGR" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMGR" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMGR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVR" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVR" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVR" target="BWM-VR03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVR" target="BWM-VR04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBVR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVR" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBVR" target="SAADR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AFDL" target="AFDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AFDL" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AFDR" target="AIYR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIYR" target="ADFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIYR" target="AUAL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AIYR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIYR" target="RIVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIYR" target="SIBDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="AFDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AINR" target="AFDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="ASER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="CEPshDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINR" target="RID">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJL" target="AIML">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJL" target="ASKL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJL" target="CEPshDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJL" target="CEPshVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJL" target="PVQL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ASJL" target="PVQR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBL" target="ADFL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWBL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBL" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWBL" target="AVHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBR" target="ADFR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBR" target="AIYR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWBR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWBR" target="AWBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWCL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AWCL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AWCL" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AWCL" target="AIYR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWCL" target="ASEL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AWCL" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWCL" target="IL1R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWCL" target="IL2R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="PVQL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQL" target="ASJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQL" target="ASKL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIFL" target="ALML">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFL" target="ASHL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIFL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">6</data>
+    </edge>
+    <edge source="RIFL" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFL" target="AVJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFL" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIFL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AINL" target="ADFR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AINL" target="AFDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AINL" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINL" target="AINR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINL" target="ASGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINL" target="AUAR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AINL" target="BAGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AINL" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASIR" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASIR" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASIR" target="CEPshDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJR" target="ASKR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ASJR" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASJR" target="PVQR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RIFR" target="ASHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIFR" target="AVJL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIFR" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIFR" target="PVPR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFR" target="RIFL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIFR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBR" target="AVBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBR" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBR" target="BAGL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="DVA">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="OLQDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="RIBL">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBR" target="RIBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="RIGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="SIAVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="SIBDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="SIBVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDR" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDR" target="BWM-DL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDR" target="BWM-DR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDDR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDDR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDDR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMDVR" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVR" target="BWM-VL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVR" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDVR" target="BWM-VR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="SMDVR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMDVR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMDVR" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVEL" target="OLQDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVEL" target="SMDVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVEL" target="URYDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVEL" target="URYVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIBL" target="AVDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIBL" target="BAGR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIBL" target="OLQDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="OLQVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="RIBL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="RIS">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="SIADL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="SIAVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIBL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVL" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVL" target="BWM-VR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVL" target="CEPVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDVL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMDVL" target="RIVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMDVL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIML" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIML" target="ASGL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AIML" target="ASJL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASGL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ASGL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASGL" target="AIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIMR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIMR" target="ASGR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="AIMR" target="ASJL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AIMR" target="ASJR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AIMR" target="ASKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASGR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ASGR" target="AIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASGR" target="ASER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BAGL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BAGL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="BAGL" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="BAGL" target="RIGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASER" target="AFDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASER" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASER" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ASER" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ASER" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ASER" target="AIYR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ASER" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASER" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWAL" target="ADLL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="AIZL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="ASEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWAL" target="AWAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="AWBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAL" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVR" target="excgl">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVR" target="GLRVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIVR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIVR" target="SAADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVR" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASEL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="ASEL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="ASEL" target="AIYL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="ASEL" target="AIYR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ASEL" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASEL" target="AWCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDR" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMBDR" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDR" target="BWM-DL03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDR" target="BWM-DL04">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDR" target="BWM-DL05">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDR" target="GLRL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDR" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SMBDR" target="SAAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SMBDR" target="SIBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SMBDR" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALA" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALA" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ALA" target="CEPshDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALA" target="CEPshVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="ALA" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALML" target="BDUL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALML" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ALML" target="PVR">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="BDUL" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUL" target="PVCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUL" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUL" target="SIBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDL" target="ADAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPDL" target="IL1DL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDL" target="OLLL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPDL" target="OLQDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDL" target="PVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDL" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPDL" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDL" target="URADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDL" target="URBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDL" target="URYDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="AVJR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="CEPVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="IL1VL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVR" target="URYVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUR" target="ALMR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUR" target="BDUL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BDUR" target="PVCR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDR" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="CEPDR" target="OLLR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPDR" target="OLQDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDR" target="PVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPDR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPDR" target="URADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDR" target="URBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPDR" target="URYDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAR" target="ADLR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AWAR" target="ASER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AWAR" target="AWBR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="AWAR" target="PVQR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQR" target="AIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQR" target="AIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="PVQR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQR" target="AIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVQR" target="ASKR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVQR" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASIL" target="ADLL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="ASIL" target="AWCL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="IL2R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="OLLR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="RIGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="SIBVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDR" target="URBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYDR" target="RIGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYDR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYDR" target="SMDDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URYVR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYVR" target="RIGR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVR" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYVR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="OLQDL" target="CEPDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDL" target="IL2L">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQDL" target="OLLL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDL" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQDL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQDL" target="SIBVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQDL" target="URBL">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQDL" target="URYDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVL" target="IL2L">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQVL" target="OLLL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVL" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVL" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVL" target="SIBDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="URYVL" target="CEPshVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYVL" target="RIGL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URYVL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYVL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="PVPR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVPR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVPR" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPR" target="AVDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPR" target="AVDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPR" target="DVA">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPR" target="RIGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVPR" target="URXR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="AVKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="BAGR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIGL" target="DVC">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="IL1DL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="OLQDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIGL" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="URYDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGL" target="URYVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCR" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCR" target="SIAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIS" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIS" target="AVKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="CEPDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="CEPVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="CEPVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIS" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="RMGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIS" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="AVKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="PVPR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVKL" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="SAADR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVKL" target="SAAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="SMBDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKL" target="SMBDR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="PVT">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="AVKR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVKR" target="RIVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="SAADL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="SAADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="SAAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVKR" target="SAAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDL" target="BWM-DR04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="IL1R">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDL" target="IL2R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="OLLR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMDL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="RMGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDL" target="SMDDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAADR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAADR" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAADR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAADR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAAVL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="SAAVL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAAVL" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="SAAVL" target="RMDVL">
+      <data key="d6">electrical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SAAVL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVT" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVT" target="AVKL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVT" target="AVKR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="PVT" target="CEPshDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVT" target="CEPshVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVT" target="DVC">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVT" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVT" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVT" target="RIGR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVT" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVL" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIVL" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIVL" target="SAADR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIVL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="BWM-DL04">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDR" target="BWM-DL06">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="BWM-VL04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="IL1L">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDR" target="IL2L">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDR" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAADL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAADL" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAADL" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAADL" target="RMDDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAADL" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAAVR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="SAAVR" target="RIML">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="SAAVR" target="RIMR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="SAAVR" target="SMBVL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SAAVR" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="AVL" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="AVL" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMER" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMER" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RMER" target="GLRL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMER" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMER" target="URAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1R" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1R" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1R" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1R" target="RMDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1R" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1R" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1R" target="URAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2R" target="OLQDR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2R" target="OLQVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2R" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RIGR" target="AIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RIGR" target="AIZR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="AVKL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIGR" target="AVKR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="BAGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="CEPshVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="DVC">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="OLQVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="PVT">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIGR" target="RIGL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="RIR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RIGR" target="RMGR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="URXR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RIGR" target="URYVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="BAGR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="BAGR" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="BAGR" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="BAGR" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="AVBL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="AVBR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="PVCL" target="AVDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="AVHR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="RID">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="PVCL" target="SIAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1DL" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1DL" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1DL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="IL1DL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="IL1DL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URADL" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URADL" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URADL" target="IL1DL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URADL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URADL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URBL" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBL" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBL" target="IL1L">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URBL" target="IL2L">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBL" target="SIAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBL" target="URXL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYDL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="URYDL" target="IL1DL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDL" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URYDL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDL" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URYDL" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RMDVR" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDVR" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RMDVR" target="BWM-VL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDVR" target="BWM-VL04">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMDVR" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">6</data>
+    </edge>
+    <edge source="RMDVR" target="SAAVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDVR" target="SMDVR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URADR" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URADR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URADR" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URADR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URADR" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBR" target="BWM-DR06">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBR" target="CEPDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBR" target="IL1R">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URBR" target="IL2R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URBR" target="URXR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPVL" target="AVER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPVL" target="OLLL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPVL" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPVL" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="CEPVL" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPVL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPVL" target="URYVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDDL" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDDL" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDDL" target="BWM-DR03">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDDL" target="BWM-DR04">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDDL" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">6</data>
+    </edge>
+    <edge source="CEPVR" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="CEPVR" target="OLLR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="CEPVR" target="OLQVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPVR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPVR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="CEPVR" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="CEPVR" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="OLQVR" target="IL2R">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVR" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="OLQVR" target="SIBDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="OLQVR" target="URBR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDDR" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDDR" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDDR" target="BWM-DL03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDDR" target="BWM-DL04">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDDR" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RMDDR" target="SAADR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="SIADL" target="SIADR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVC" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="DVC" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVC" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVC" target="BAGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="DVC" target="RIBL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVC" target="RIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="DVC" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="DVC" target="RIGR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="DVC" target="URXR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXR" target="ADAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXR" target="AUAR">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXR" target="IL2R">
+      <data key="d6">electrical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXR" target="RIAR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URXR" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXR" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXR" target="RIGR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="FLPR" target="ADEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="FLPR" target="AVAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="FLPR" target="AVAR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="GLRL" target="RMEL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMEL" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMEL" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="GLRR" target="RMER">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMDVL" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDVL" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMDVL" target="BWM-VR03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDVL" target="BWM-VR04">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMDVL" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="RMDVL" target="RMDL">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1DR" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1DR" target="BWM-DR02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1DR" target="GLRDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1DR" target="IL1R">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1DR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1DR" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1DR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1L" target="BWM-DL02">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="IL1L" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL1L" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1L" target="RMDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1L" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1L" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1L" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URAVR" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVR" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVR" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URAVR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URAVR" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1VL" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1VL" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1VL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL1VL" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">5</data>
+    </edge>
+    <edge source="IL1VL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1VR" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1VR" target="BWM-VR02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL1VR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1VR" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL1VR" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL1VR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DL" target="IL2DL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL2DL" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DL" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2DL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2DL" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2DL" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DL" target="URADL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMED" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">6</data>
+    </edge>
+    <edge source="RMED" target="BWM-VL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMED" target="BWM-VR01">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMED" target="BWM-VR03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMED" target="RMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMED" target="RMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMED" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMED" target="SMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMED" target="SMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMEV" target="BWM-DL01">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="RMEV" target="BWM-DL03">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMEV" target="BWM-DR01">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMEV" target="BWM-DR03">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="RMEV" target="RMDDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMEV" target="RMDDR">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="RMEV" target="SMDVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="RMEV" target="SMDVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DR" target="GLRR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DR" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL2DR" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2DR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2DR" target="URADR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2L" target="CEPDL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2L" target="OLQDL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2L" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2L" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL2VL" target="RIH">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2VL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL2VL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL2VL" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="IL2VL" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL2VL" target="URAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URAVL" target="BWM-VL01">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVL" target="BWM-VL02">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVL" target="IL2VL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URAVL" target="RIPL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="URAVL" target="RMED">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URAVL" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URAVL" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2VR" target="GLRVR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2VR" target="RIPR">
+      <data key="d6">chemical</data>
+      <data key="d7">4</data>
+    </edge>
+    <edge source="IL2VR" target="RMEL">
+      <data key="d6">chemical</data>
+      <data key="d7">3</data>
+    </edge>
+    <edge source="IL2VR" target="RMER">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2VR" target="RMEV">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="IL2VR" target="URAVR">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXL" target="AIBR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="AUAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXL" target="AVEL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="IL1L">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="IL2L">
+      <data key="d6">electrical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="OLQVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="PVPL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXL" target="RIAL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXL" target="RICL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="RICR">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="RIGL">
+      <data key="d6">chemical</data>
+      <data key="d7">2</data>
+    </edge>
+    <edge source="URXL" target="RMGL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+    <edge source="URXL" target="URAVL">
+      <data key="d6">chemical</data>
+      <data key="d7">1</data>
+    </edge>
+  </graph>
+</graphml>

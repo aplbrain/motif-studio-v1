@@ -50,12 +50,116 @@
             "website": "https://bossdb.org/tools/DotMotif"
         },
         {
-            "name": "Takemura2013_Drosophila-medulla.graphml",
+            "name": "Takemura 2013 Drosophila medulla",
             "location": {
                 "type": "file",
                 "path": "graphs/Takemura2013_Drosophila-medulla.graphml"
             },
             "website": "https://bossdb.org/project/Takemura2013"
+        },
+        {
+            "name": "Witvliet 2021 Dataset 1",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_1_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_1/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_1_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_1_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 2",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_2_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_2/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_2_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_2_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 3",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_3_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_3/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_3_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_3_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 4",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_4_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_4/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_4_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_4_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 5",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_5_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_5/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_5_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_5_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 6",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_6_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_6/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_6_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_6_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 7",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_7_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_7/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_7_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_7_Segmentation/segmentation"
+            }
+        },
+        {
+            "name": "Witvliet 2021 Dataset 8",
+            "location": {
+                "type": "file",
+                "path": "graphs/witvliet_2020_8_node_attributes.graphml"
+            },
+            "website": "https://bossdb.org/project/witvliet2020",
+            "visualization": {
+                "image_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_8/em",
+                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/witvliet2020/Dataset_8_Mesh",
+                "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/witvliet2020/Dataset_8_Segmentation/segmentation"
+            }
         }
     ]
 }
