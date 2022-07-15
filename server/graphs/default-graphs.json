@@ -10,7 +10,7 @@
             "visualization": {
                 "vertex_segmentation_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron",
                 "image_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/em",
-		"mesh_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron"
+                "mesh_channel": "precomputed://s3://bossdb-open-data/Kasthuri/ac4/neuron/mesh_mip_2_err_40"
             }
         },
         {
@@ -21,9 +21,8 @@
             },
             "website": "https://bossdb.org/project/microns-pinky",
             "visualization": {
-                "vertex_segmentation_channel": "boss://https://api.bossdb.io/microns/pinky100_8x8x40/segmentation",
-                "image_channel": "boss://https://api.bossdb.io/microns/pinky100/em",
-                "mesh_channel": "precomputed://https://s3.amazonaws.com/mesh.bossdb.boss/pinky100_v185/seg"
+                "vertex_segmentation_channel": "precomputed://gs://microns_public_datasets/pinky100_v185/seg",
+                "image_channel": "precomputed://gs://microns_public_datasets/pinky100_v0/son_of_alignment_v15_rechunked"
             }
         },
         {
